@@ -1,0 +1,12 @@
+@import './utils/reset.scss';
+@import './utils/variables.scss';
+
+body {
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $text-color;
+  background-color: $background-color;
+  line-height: 1.1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

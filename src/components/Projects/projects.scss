@@ -1,0 +1,11 @@
+@import '../../styles/utils/variables.scss';
+
+.projects__wrapper {
+  @include flex-column-center-center;
+  
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  border: 10px solid yellow
+}
+

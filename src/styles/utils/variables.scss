@@ -3,9 +3,22 @@
 $background-color: #141313; 
 $text-color: #fff;
 $font-family: 'Readex Pro', sans-serif;
-$font-size: 16px;
+$font-size-default: 1rem;
+$font-size-large: 1.5rem;
+$font-size-xlarge: 2rem;
 $font-weight: 400;
 $font-weight-bold: 700;
 
+/* Layout */
 
+@mixin flex-column-center-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+ @mixin flex-column {
+  display: flex;
+  flex-direction: column;
+ }

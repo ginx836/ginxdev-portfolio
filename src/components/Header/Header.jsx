@@ -1,16 +1,44 @@
 import { NavLink } from 'react-router-dom'
+import { useState } from 'react'
+
+const NavLinkItem = ({ to, closeMenu, children }) => (
+  <NavLink to={to} onClick={closeMenu}>
+    {children}
+  </NavLink>
+)
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+
+  const navLinks = [
+    { to: '/projects', name: 'Projets' },
+    { to: '/about', name: 'A Propos' },
+    { to: '/contact', name: 'Contact' },
+  ]
+
   return (
-    <header>
-      <div className="header__wrapper">
-        <p className="header__logo">GD</p>
-        <nav className="header__nav">
-          <NavLink to="/">Accueil</NavLink>
-          <NavLink to="/projects">Projets</NavLink>
-          <NavLink to="/about">A Propos</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+    <header className={`header ${isOpen ? 'open' : ''}`}>
+      <div className={`header__wrapper ${isOpen ? 'open' : ''}`}>
+        <NavLink to="/" className="header__logo" onClick={closeMenu}>
+          GD
+        </NavLink>
+        <nav className={`header__nav ${isOpen ? 'open' : ''}`}>
+          {navLinks.map((link, index) => (
+            <NavLinkItem key={index} to={link.to} closeMenu={closeMenu}>
+              {link.name}
+            </NavLinkItem>
+          ))}
         </nav>
+        <button
+          className={`hamburger ${isOpen ? 'open' : ''}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
       </div>
     </header>
   )

@@ -1,0 +1,33 @@
+@import '../../styles/utils/variables.scss';
+
+
+.hero {
+  @include flex-column-center-center;
+  height: auto;
+  border: 10px solid red;
+  padding: 5rem;
+}
+
+.hero__description {
+  @include flex-column-center-center;
+  width: 80%;
+  border: 10px solid blue;
+}
+
+.hero__picture {
+  width: 200px;
+  object-fit: center;
+  border: 10px solid green;
+  margin-bottom: 2rem;
+}
+
+.hero__title {
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.hero__text {
+  font-size: $font-size-default;
+  font-weight: 400;
+  text-align: center;
+}

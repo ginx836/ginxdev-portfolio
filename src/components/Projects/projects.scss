@@ -2,10 +2,22 @@
 
 .projects__wrapper {
   @include flex-column-center-center;
-  
+
   margin: 0 auto;
   max-width: 1200px;
+  height: auto;
   width: 100%;
-  border: 10px solid yellow
+  border: 10px solid yellow;
+
+  position: relative;
+  animation: fadeIn 500ms ease-in-out forwards;
 }
 
+.projects__title {
+  font-size: $font-size-xlarge;
+  font-weight: 700;
+}
+
+.wrapper {
+  margin: $margin-large;
+}

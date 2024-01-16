@@ -5,7 +5,7 @@ $text-color: #fff;
 $font-family: 'Readex Pro', sans-serif;
 $font-size-default: 1rem;
 $font-size-large: 1.5rem;
-$font-size-xlarge: 2rem;
+$font-size-xlarge: 3rem;
 $font-weight: 400;
 $font-weight-bold: 700;
 
@@ -22,3 +22,9 @@ $font-weight-bold: 700;
   display: flex;
   flex-direction: column;
  }
+
+ /* Margin & Padding */
+
+ $margin-default: 1rem;
+ $margin-small : 2rem;
+ $margin-large: 5rem;

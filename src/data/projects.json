@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "header": "Booki",
+    "body": "Intégration d'une maquette en HTML/CSS",
+    "colour": "#1ABC9C",
+    "img": "/assets/Projects/Booki-Desktop.webp"
+  },
+  {
+    "id": 1,
+    "header": "Portfolio Sophie Bluel",
+    "body": "Ajout de nouvelles fonctionnalités sur le site de Sophie Bluel",
+    "colour": "#ba9077",
+    "img": "/assets/Projects/Bluel-Desktop.webp"
+  },
+  {
+    "id": 2,
+    "header": "Qwenta",
+    "body": "Gestion d'un projet de développement web",
+    "colour": "#1ABC9C",
+    "img": "/assets/Projects/Qwenta-Desktop.webp"
+  },
+  {
+    "id": 3,
+    "header": "Nina Carducci",
+    "body": "Optimisation, débogage et amélioration du SEO du site de Nina Carducci",
+    "colour": "#C0392B",
+    "img": "/assets/Projects/Nina-Desktop.webp"
+  },
+  {
+    "id": 4,
+    "header": "Kasa",
+    "body": "Création d'une application React avec une API",
+    "colour": "#513B56",
+    "img": "/assets/Projects/Kasa-Desktop.webp"
+  },
+  {
+    "id": 5,
+    "header": "Mon Vieux Grimoire",
+    "body": "Développement du back-end d'une site de partage de livres avec Node.js, Express et MongoDB",
+    "colour": "#513B56",
+    "img": "/assets/Projects/Grimoire-Desktop.webp"
+  }
+]

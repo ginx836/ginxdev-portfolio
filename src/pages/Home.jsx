@@ -1,5 +1,6 @@
 import Hero from '../components/Hero/Hero'
 import Projects from '../components/Projects/Projects'
+import About from '../components/About/About'
 import Footer from '../components/Footer/Footer'
 
 import Avatar from '../assets/Hero/avatar.jpeg'
@@ -21,6 +22,7 @@ const Home = () => {
         picture={Avatar}
       />
       <Projects />
+      <About />
       <Footer />
     </>
   )

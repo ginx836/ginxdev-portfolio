@@ -1,5 +1,6 @@
 import './carousel.scss'
 import { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
 const Carousel = ({ data }) => {
   const [activeID, setActiveID] = useState(0)
@@ -31,6 +32,7 @@ const Panel = ({ data, panelStyle, buttonStyle, toggleButtonColour }) => (
   <aside className="panel" style={panelStyle}>
     <h2 className="panel-header">{data.header}</h2>
     <p className="panel-info">{data.body}</p>
+    <NavLink to={`/projects/${data.id}`}>
     <button
       className="panel-button"
       style={buttonStyle}
@@ -39,6 +41,7 @@ const Panel = ({ data, panelStyle, buttonStyle, toggleButtonColour }) => (
     >
       Read More
     </button>
+    </NavLink>
   </aside>
 )
 

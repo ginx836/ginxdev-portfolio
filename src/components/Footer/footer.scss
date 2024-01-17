@@ -1,7 +1,12 @@
+@import '../../styles/utils/variables.scss';
+
 .footer {
-  display: flex;
-  justify-content: center;
-  background-color: steelblue;
-  color: white;
-  height: 120px;
+  @include flex-column-center-center;
+  height: 50px;
+  padding: $margin-small;
+
+  &__text {
+    @include flex-column-center-center;
+    color: white;
+  }
 }

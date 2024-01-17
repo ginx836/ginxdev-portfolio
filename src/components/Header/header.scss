@@ -3,20 +3,23 @@
 .header {
   &.open {
     height: 100vh;
-    background-color: #fff;
+    background-color: $background-color-white;
     position: fixed;
+    z-index: 100;
   }
 }
 
 .header__wrapper {
-  width: 10em;
+  width: $margin-header;
   height: 100vh;
   @include flex-column;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: $background-color-black;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.672);
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 100;
 
   &.open {
     height: 100vh;
@@ -25,31 +28,31 @@
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 5rem;
+    height: $margin-header-mobile;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
   .header__logo {
-    font-size: 3em;
-    color: #000;
-    display: flex;
-    justify-content: center;
-    padding-top: 3rem;
-    text-decoration: none;
-    border: 10px solid pink;
+    @include link;
+    @include flex-column-center-center;
+    font-size: $font-size-main-title;
+    margin-top: $margin-large;
+    color: $text-color-white;
+    // border: 10px solid pink;
 
     @media screen and (max-width: 768px) {
-      padding-top: 0;
-      padding-left: 1rem;
+      margin: 0;
+      padding-left: $margin-default;
+      height: $margin-header-mobile;
     }
   }
 
   .header__nav {
     @include flex-column;
     align-items: center;
-    margin-bottom: 3rem;
+    margin-bottom: $margin-small;
 
     &.open {
       @include flex-column-center-center;
@@ -57,6 +60,21 @@
 
     @media screen and (max-width: 768px) {
       display: none;
+    }
+
+    & a {
+      @include link;
+      margin-bottom: $margin-default;
+      color: $text-color-white;
+      font-size: $font-size-large;
+
+      @media screen and (max-width: 768px) {
+        font-size: $font-size-large;
+      }
+
+      &:hover {
+        color: teal;
+      }
     }
   }
 
@@ -70,7 +88,7 @@
 
     @media screen and (max-width: 768px) {
       display: block;
-      margin-right: 1rem;
+      margin-right: $margin-default;
     }
   }
 }

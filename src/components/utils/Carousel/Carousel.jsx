@@ -31,7 +31,7 @@ const Carousel = ({ data }) => {
 const Panel = ({ data, panelStyle, buttonStyle, toggleButtonColour }) => (
   <aside className="panel" style={panelStyle}>
     <h2 className="panel-header">{data.header}</h2>
-    <p className="panel-info">{data.body}</p>
+    <p className="panel-info">{data.body_title}</p>
     <NavLink to={`/projects/${data.id}`}>
     <button
       className="panel-button"
@@ -39,7 +39,7 @@ const Panel = ({ data, panelStyle, buttonStyle, toggleButtonColour }) => (
       onMouseEnter={toggleButtonColour}
       onMouseLeave={toggleButtonColour}
     >
-      Read More
+      Plus
     </button>
     </NavLink>
   </aside>

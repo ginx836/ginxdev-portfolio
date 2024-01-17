@@ -2,33 +2,46 @@
 
 
 .hero {
-  @include flex-column-center-center;
-  height: auto;
-  border: 10px solid red;
+  @include flex-row-center-center;
+  min-height: 40rem;
+  // border: 10px solid red;
   padding: $margin-large;
+
+  @media screen and (max-width: 768px) {
+    @include flex-column;
+    padding: $margin-default;
+  }
 }
 
 .hero__description {
   @include flex-column;
-  width: 90%;
-  border: 10px solid blue;
+  width: 70%;
+  // border: 10px solid blue;
 }
 
 .hero__picture {
   width: 200px;
   object-fit: center;
-  border: 10px solid green;
-  margin-bottom: $margin-small;
+  // border: 10px solid green;
+  margin-right: $margin-large;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: $margin-default;
+  }
 }
 
 .hero__title {
-  font-size: 6rem;
+  font-size: $font-size-main-title;
   font-weight: 700;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: $font-size-xlarge;
+  }
 }
 
 .hero__text {
-  font-size: $font-size-default;
-  font-weight: 400;
   text-align: center;
+  line-height: 1.5;
 }

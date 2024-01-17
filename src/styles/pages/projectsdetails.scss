@@ -1,0 +1,50 @@
+@import '../utils/variables.scss';
+
+.projects-details {
+  @include flex-column-center-center;
+  // border: 10px solid yellow;
+  position: relative;
+  animation: fadeIn 500ms ease-in-out forwards;
+  &__title {
+    @include title;
+    display: flex;
+    justify-content: center;
+    margin-top: $margin-large;
+  }
+  &-body {
+    width: 100%;
+    // border: 10px solid green;
+    text-align: center;
+
+    &__title {
+      font-size: $font-size-large;
+      margin-bottom: $margin-small;
+    }
+
+    &__description {
+      font-size: $font-size-large;
+      margin-top: $margin-large;
+      margin-bottom: $margin-small;
+      white-space: pre-line;
+      line-height: 1.2;
+    }
+  }
+  &__link {
+    @include flex-row-center-center;
+    margin-bottom: $margin-large;
+  }
+}
+
+.picture-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2rem;
+  justify-items: center;
+  height: 100%;
+  // border: 10px solid red;
+  margin: $margin-large;
+
+  &__img {
+    height: 100%;
+  }
+}

@@ -2,43 +2,58 @@
   {
     "id": 0,
     "header": "Booki",
-    "body": "Intégration d'une maquette en HTML/CSS",
-    "colour": "#1ABC9C",
-    "img": "/assets/Projects/Booki-Desktop.webp"
+    "body_title": "Intégration d'une maquette",
+    "description": "Mon 1er projet.\nIl s'agit d'une intégration simple d'une maquette FIGMA en HTML/CSS.\nCe projet a été réalisé dans le cadre de ma formation de développeur web chez OpenClassrooms.",
+    "colour": "#454545",
+    "img": "/assets/Projects/Covers/Booki-Cover.webp",
+    "pictures": [
+      "/assets/Projects/Main/Booki-Desktop.webp",
+      "/assets/Projects/Main/Booki-Tab.webp",
+      "/assets/Projects/Main/Booki-Mobile.webp"
+    ],
+    "link": "https://github.com/ginx836/P2_Booki",
+    "link2": "https://ginx836.github.io/P2_Booki/"
   },
   {
     "id": 1,
     "header": "Portfolio Sophie Bluel",
-    "body": "Ajout de nouvelles fonctionnalités sur le site de Sophie Bluel",
+    "body_title": "Ajout de nouvelles fonctionnalités sur le site de Sophie Bluel",
+    "description": "L'objectif de ce projet était de développer les compétences en JS.\nEn travaillant avec une API, j'ai du concevoir une gallerie d'images avec des filtres basés sur les catégories des images.\n Ajouter une page de connexion afin de permettre au propriétaire de pouvoir administrer sa page et ajouter de nouveaux projets à son site. L'ajout se fait via une modale.\nLe projet est écrit en vanilla JS.\nCe projet a été réalisé dans le cadre de ma formation de développeur web chez OpenClassrooms.",
     "colour": "#ba9077",
-    "img": "/assets/Projects/Bluel-Desktop.webp"
+    "img": "/assets/Projects/Covers/Bluel-Cover.webp",
+    "pictures": [
+      "/assets/Projects/Main/Bluel-1.webp",
+      "/assets/Projects/Main/Bluel-2.webp",
+      "/assets/Projects/Main/Bluel-3.webp"
+    ],
+    "link": "https://github.com/ginx836/P3-Portfolio-Sophie-Bluel"
   },
   {
     "id": 2,
     "header": "Qwenta",
-    "body": "Gestion d'un projet de développement web",
+    "body_title": "Gestion d'un projet de développement web",
     "colour": "#1ABC9C",
-    "img": "/assets/Projects/Qwenta-Desktop.webp"
+    "img": "/assets/Projects/Covers/Qwenta-Cover.webp"
   },
   {
     "id": 3,
     "header": "Nina Carducci",
-    "body": "Optimisation, débogage et amélioration du SEO du site de Nina Carducci",
+    "body_title": "Optimisation, débogage et amélioration du SEO du site de Nina Carducci",
     "colour": "#C0392B",
-    "img": "/assets/Projects/Nina-Desktop.webp"
+    "img": "/assets/Projects/Covers/Nina-Cover.webp"
   },
   {
     "id": 4,
     "header": "Kasa",
-    "body": "Création d'une application React avec une API",
+    "body_title": "Création d'une application React avec une API",
     "colour": "#513B56",
-    "img": "/assets/Projects/Kasa-Desktop.webp"
+    "img": "/assets/Projects/Covers/Kasa-Cover.webp"
   },
   {
     "id": 5,
     "header": "Mon Vieux Grimoire",
-    "body": "Développement du back-end d'une site de partage de livres avec Node.js, Express et MongoDB",
+    "body_title": "Développement du back-end d'une site de partage de livres avec Node.js, Express et MongoDB",
     "colour": "#513B56",
-    "img": "/assets/Projects/Grimoire-Desktop.webp"
+    "img": "/assets/Projects/Covers/Grimoire-Cover.webp"
   }
 ]

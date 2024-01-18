@@ -5,6 +5,7 @@
   // border: 10px solid yellow;
   position: relative;
   animation: fadeIn 500ms ease-in-out forwards;
+
   &__title {
     @include title;
     display: flex;
@@ -19,18 +20,29 @@
     &__title {
       font-size: $font-size-large;
       margin-bottom: $margin-small;
+
+      @media screen and (max-width: 768px) {
+        width: 80%;
+        margin: $margin-small auto;
+      }
     }
 
     &__description {
-      font-size: $font-size-large;
+      font-size: $font-size-medium;
       margin-top: $margin-large;
       margin-bottom: $margin-small;
       white-space: pre-line;
       line-height: 1.2;
+
+      @media screen and (max-width: 768px) {
+        width: 80%;
+        margin: $margin-small auto;
+      }
     }
   }
   &__link {
     @include flex-row-center-center;
+    gap: 2em;
     margin-bottom: $margin-large;
   }
 }
@@ -44,7 +56,18 @@
   // border: 10px solid red;
   margin: $margin-large;
 
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    img:not(:first-child) {
+      display: none;
+    }
+  }
+
   &__img {
     height: 100%;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 }

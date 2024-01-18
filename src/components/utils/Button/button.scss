@@ -1,21 +1,20 @@
-.button {
-  margin: 1.3rem 3.5rem;
-  padding: 0.8em 1.3em;
-  background: none;
-  border: 3px solid white;
-  border-radius: 25px;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-  &:hover {
-    background: white;
-    color: black;
-  }
+@import '../../../styles/utils/variables.scss';
 
-  .button-text {
-    font: {
-      size: 1.2rem;
-    }
-    text-transform: uppercase;
+.button {
+  padding: 1.3em 1.3em;
+  background: $color-primary;
+  border: 1px solid $color-secondary;
+  color: $color-secondary;
+  cursor: pointer;
+  font: {
+    family: 'Montserrat';
+    size: 0.8rem;
+    weight: 700;
+    color: $text-color-black;
+  }
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $color-tertiary;
   }
 }

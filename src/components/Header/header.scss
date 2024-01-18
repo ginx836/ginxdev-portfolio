@@ -15,7 +15,7 @@
   @include flex-column;
   justify-content: space-between;
   background-color: $background-color-black;
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.672);
+  box-shadow: 0 0 10px 0 #f0f0f07a;
   position: fixed;
   left: 0;
   top: 0;
@@ -44,8 +44,9 @@
 
     @media screen and (max-width: 768px) {
       margin: 0;
-      padding-left: $margin-default;
+      padding-left: $margin-small;
       height: $margin-header-mobile;
+      font-size: $font-size-xlarge;
     }
   }
 
@@ -66,14 +67,15 @@
       @include link;
       margin-bottom: $margin-default;
       color: $text-color-white;
-      font-size: $font-size-large;
+      font-size: $font-size-medium;
+      text-transform: uppercase;
 
       @media screen and (max-width: 768px) {
         font-size: $font-size-large;
       }
 
       &:hover {
-        color: teal;
+        color: $color-tertiary;
       }
     }
   }
@@ -88,7 +90,23 @@
 
     @media screen and (max-width: 768px) {
       display: block;
-      margin-right: $margin-default;
+      margin-right: $margin-small;
+      padding: 0.8em 1.3em;
+      background: $color-primary;
+      border: 1px solid $color-secondary;
+      color: $color-secondary;
+      cursor: pointer;
+      font: {
+        family: 'Montserrat';
+        size: 0.8rem;
+        weight: 700;
+        color: $text-color-black;
+      }
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $color-tertiary;
+      }
     }
   }
 }

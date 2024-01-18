@@ -9,7 +9,7 @@ const Carousel = ({ data }) => {
   const activeData = data[activeID]
 
   const buttonStyle = {
-    color: buttonHover ? activeData.colour : '#ffffff',
+    color: buttonHover ? activeData.colour : '#000',
   }
 
   return (
@@ -39,7 +39,7 @@ const Panel = ({ data, panelStyle, buttonStyle, toggleButtonColour }) => (
       onMouseEnter={toggleButtonColour}
       onMouseLeave={toggleButtonColour}
     >
-      Plus
+      En voir d&apos;avantage
     </button>
     </NavLink>
   </aside>

@@ -15,17 +15,17 @@
 
 .hero__description {
   @include flex-column;
-  width: 70%;
   // border: 10px solid blue;
 }
 
 .hero__picture {
-  width: 200px;
+  width: 500px;
   object-fit: center;
-  // border: 10px solid green;
   margin-right: $margin-large;
+  // border: 10px solid red;
 
   @media screen and (max-width: 768px) {
+    width: 50%;
     margin-right: 0;
     margin-bottom: $margin-default;
   }
@@ -36,9 +36,9 @@
   font-weight: 700;
   text-align: center;
 
-  @media screen and (max-width: 768px) {
-    font-size: $font-size-xlarge;
-  }
+  // @media screen and (max-width: 768px) {
+  //   font-size: $font-size-xlarge;
+  // }
 }
 
 .hero__text {

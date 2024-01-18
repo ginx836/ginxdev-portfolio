@@ -4,10 +4,37 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 500px;
-  // border: 10px solid violet;
+  margin-bottom: $margin-large;
 }
 
 .about__title {
   @include title;
+  margin-bottom: $margin-large;
+}
+
+.about__content {
+  @include flex-row-center-center;
+  width: 50%;
+  // border: 10px solid violet;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.about__text {
+  width: 50%;
+  // border: 10px solid violet;
+  padding: $margin-small;
+  line-height: 1.5;
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+}
+
+.about__img {
+  width: 30%;
+  object-fit: cover;
 }

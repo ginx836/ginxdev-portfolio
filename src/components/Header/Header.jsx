@@ -37,7 +37,7 @@ const Header = () => {
           className={`hamburger ${isOpen ? 'open' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          ☰
+          Menu
         </button>
       </div>
     </header>

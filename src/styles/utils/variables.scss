@@ -4,6 +4,9 @@ $background-color-black: #000;
 $background-color-white: #fff;
 $text-color-white: #fff;
 $text-color-black: #000;
+$color-primary: #fff;
+$color-secondary: #000;
+$color-tertiary: #ebb523;
 
 /* Layout */
 
@@ -29,6 +32,7 @@ $text-color-black: #000;
 /* Margin & Padding */
 
 $margin-default: 1rem;
+$margin-medium: 1.5rem;
 $margin-small: 2rem;
 $margin-large: 5rem;
 
@@ -39,6 +43,7 @@ $margin-header-mobile: 6rem;
 
 $font-family: 'Readex Pro', sans-serif;
 $font-size-default: 1rem;
+$font-size-medium: 1.2rem;
 $font-size-large: 1.5rem;
 $font-size-xlarge: 3rem;
 $font-size-main-title: 5rem;

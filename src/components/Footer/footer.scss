@@ -4,6 +4,8 @@
   @include flex-column-center-center;
   height: 50px;
   padding: $margin-small;
+  width: 100%;
+  
 
   &__text {
     @include flex-column-center-center;

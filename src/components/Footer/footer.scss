@@ -3,9 +3,8 @@
 .footer {
   @include flex-column-center-center;
   height: 50px;
-  padding: $margin-small;
+  padding: $margin-large;
   width: 100%;
-  
 
   &__text {
     @include flex-column-center-center;

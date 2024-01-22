@@ -1,47 +1,83 @@
+import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
+import PropTypes from 'prop-types'
+import { LinkedinPlain } from 'devicons-react'
+import GithubcodespacesPlain from 'devicons-react/lib/icons/GithubcodespacesPlain'
 
-const NavLinkItem = ({ to, closeMenu, children }) => (
-  <NavLink to={to} onClick={closeMenu}>
+const NavLinkItem = ({ to, children }) => (
+  <NavLink to={to}>
     {children}
   </NavLink>
 )
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+NavLinkItem.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+}
 
-  const closeMenu = () => {
-    setIsOpen(false)
-  }
+const Header = () => {
+const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const navLinks = [
-    { to: '/', name: 'Accueil' },
-    // { to: '/about', name: 'A Propos' },
-    { to: '/contact', name: 'Contact' },
+    { to: '/', name: 'Accueil', isExternal: false },
+    { to: '/contact', name: 'Contact', isExternal: false },
+    {
+      to: 'https://www.linkedin.com',
+      name:
+        windowWidth <= 1024 ? (
+          <LinkedinPlain color="white" size={30} />
+        ) : (
+          'LinkedIn'
+        ),
+      isExternal: true,
+    },
+    {
+      to: 'https://github.com/ginx836',
+      name:
+        windowWidth <= 1024 ? (
+          <GithubcodespacesPlain color="white" size={30} />
+        ) : (
+          'Github'
+        ),
+      isExternal: true,
+    },
   ]
 
   return (
-    <header className={`header ${isOpen ? 'open' : ''}`}>
-      <div className={`header__wrapper ${isOpen ? 'open' : ''}`}>
-        <NavLink to="/" className="header__logo" onClick={closeMenu}>
+    <header className="header">
+      <div className="header__wrapper">
+        <h1 to="/" className="header__logo">
           GD
-        </NavLink>
-        <nav className={`header__nav ${isOpen ? 'open' : ''}`}>
-          {navLinks.map((link, index) => (
-            <NavLinkItem key={index} to={link.to} closeMenu={closeMenu}>
-              {link.name}
-            </NavLinkItem>
-          ))}
+        </h1>
+        <nav className="header__nav">
+          {navLinks.map((link, index) =>
+            link.isExternal ? (
+              <a
+                key={index}
+                href={link.to}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <NavLinkItem key={index} to={link.to}>
+                {link.name}
+              </NavLinkItem>
+            ),
+          )}
         </nav>
-        <button
-          className={`hamburger ${isOpen ? 'open' : ''}`}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          Menu
-        </button>
       </div>
     </header>
   )
 }
+
+Header.propTypes = {}
 
 export default Header

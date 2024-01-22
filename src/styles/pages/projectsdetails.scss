@@ -10,7 +10,7 @@
     @include title;
     display: flex;
     justify-content: center;
-    margin-top: $margin-large;
+    margin-top: $margin-xlarge;
   }
   &-body {
     width: 100%;
@@ -19,31 +19,31 @@
 
     &__title {
       font-size: $font-size-large;
-      margin-bottom: $margin-small;
+      margin-bottom: $margin-large;
 
       @media screen and (max-width: 768px) {
         width: 80%;
-        margin: $margin-small auto;
+        margin: $margin-large auto;
       }
     }
 
     &__description {
       font-size: $font-size-medium;
-      margin-top: $margin-large;
-      margin-bottom: $margin-small;
+      margin-top: $margin-xlarge;
+      margin-bottom: $margin-large;
       white-space: pre-line;
       line-height: 1.2;
 
       @media screen and (max-width: 768px) {
         width: 80%;
-        margin: $margin-small auto;
+        margin: $margin-large auto;
       }
     }
   }
   &__link {
     @include flex-row-center-center;
     gap: 2em;
-    margin-bottom: $margin-large;
+    margin-bottom: $margin-xlarge;
   }
 }
 
@@ -54,7 +54,7 @@
   justify-items: center;
   height: 100%;
   // border: 10px solid red;
-  margin: $margin-large;
+  margin: $margin-xlarge;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;

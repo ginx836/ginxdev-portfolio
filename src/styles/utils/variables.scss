@@ -1,62 +1,30 @@
-/* Colors */
+@import './mixins';
 
-$background-color-black: #000;
-$background-color-white: #fff;
-$text-color-white: #fff;
-$text-color-black: #000;
+/* Colors */
 $color-primary: #fff;
 $color-secondary: #000;
 $color-tertiary: #ebb523;
 
-/* Layout */
-
-@mixin flex-column-center-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-@mixin flex-row-center-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Margin & Padding */
-
-$margin-default: 1rem;
+$margin-small: 1rem;
 $margin-medium: 1.5rem;
-$margin-small: 2rem;
-$margin-large: 5rem;
+$margin-large: 2rem;
+$margin-xlarge: 5rem;
 
 $margin-header: 15rem;
 $margin-header-mobile: 6rem;
 
 /* Fonts */
-
-$font-family: 'Readex Pro', sans-serif;
 $font-size-default: 1rem;
 $font-size-medium: 1.2rem;
 $font-size-large: 1.5rem;
 $font-size-xlarge: 3rem;
 $font-size-main-title: 5rem;
-$font-weight: 400;
 $font-weight-bold: 700;
 
-@mixin title {
-  font-size: $font-size-xlarge;
-  font-weight: $font-weight-bold;
-}
+/* Breakpoints */
+$breakpoint-small: 425px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1440px;
 
-@mixin link {
-  text-decoration: none;
-  color: $text-color-black;
-  font-weight: $font-weight;
-}

@@ -1,15 +1,14 @@
 @import '../../styles/utils/variables.scss';
 
-
 .hero {
   @include flex-row-center-center;
   min-height: 40rem;
   // border: 10px solid red;
-  padding: $margin-large;
+  padding: $margin-xlarge;
 
   @media screen and (max-width: 768px) {
     @include flex-column;
-    padding: $margin-default;
+    padding: $margin-small;
   }
 }
 
@@ -21,13 +20,13 @@
 .hero__picture {
   width: 500px;
   object-fit: center;
-  margin-right: $margin-large;
+  margin-right: $margin-xlarge;
   // border: 10px solid red;
 
   @media screen and (max-width: 768px) {
     width: 50%;
     margin-right: 0;
-    margin-bottom: $margin-default;
+    margin-bottom: $margin-small;
   }
 }
 

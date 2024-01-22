@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@beta/devicons-react": "npm:devicons-react@^1.2.6-beta-0.3.0",
+    "devicons-react": "^1.2.6-beta-0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1"

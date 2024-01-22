@@ -4,12 +4,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: $margin-large;
+  margin-bottom: $margin-xlarge;
 }
 
 .about__title {
   @include title;
-  margin-bottom: $margin-large;
+  margin-bottom: $margin-xlarge;
 }
 
 .about__content {
@@ -26,7 +26,7 @@
 .about__text {
   width: 50%;
   // border: 10px solid violet;
-  padding: $margin-small;
+  padding: $margin-large;
   line-height: 1.5;
 
   @media screen and (max-width: 768px) {

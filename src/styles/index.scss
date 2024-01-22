@@ -1,20 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
 @import './utils/reset.scss';
 @import './utils/variables.scss';
 
 @import '../components/Header/header.scss';
 
 body {
-  font-family: $font-family;
+  font-family: 'Ubuntu', sans-serif;
   font-size: $font-size-default;
-  color: $text-color-white;
-  background-color: $background-color-black;
+  color: $color-primary;
+  background-color: $color-secondary;
   line-height: 1.1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   margin-left: $margin-header;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     margin-left: 0;
     margin-top: 5rem;
   }

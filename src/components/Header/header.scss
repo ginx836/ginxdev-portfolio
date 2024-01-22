@@ -1,50 +1,41 @@
 @import '../../styles/utils/variables.scss';
 
-.header {
-  &.open {
-    height: 100vh;
-    background-color: $background-color-white;
-    position: fixed;
-    z-index: 100;
-  }
-}
-
 .header__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
   width: $margin-header;
   height: 100vh;
+  padding-top: $margin-xlarge;
+  padding-bottom: $margin-large;
+  background-color: $color-secondary;
+  border-right: 1px solid $color-tertiary;
+
   @include flex-column;
   justify-content: space-between;
-  background-color: $background-color-black;
-  box-shadow: 0 0 10px 0 #f0f0f07a;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
 
-  &.open {
-    height: 100vh;
-    @include flex-column;
-  }
-
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-large) {
     width: 100%;
     height: $margin-header-mobile;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 $margin-large;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    padding: 0 $margin-medium;
   }
 
   .header__logo {
     @include link;
     @include flex-column-center-center;
-    font-size: $font-size-main-title;
-    margin-top: $margin-large;
-    color: $text-color-white;
-    // border: 10px solid pink;
 
-    @media screen and (max-width: 768px) {
-      margin: 0;
-      padding-left: $margin-small;
+    font-size: $font-size-main-title;
+    color: $color-primary;
+
+    @media screen and (max-width: $breakpoint-large) {
       height: $margin-header-mobile;
       font-size: $font-size-xlarge;
     }
@@ -52,60 +43,37 @@
 
   .header__nav {
     @include flex-column;
-    align-items: center;
-    margin-bottom: $margin-small;
+    padding-left: $margin-large;
 
-    &.open {
-      @include flex-column-center-center;
+    @media screen and (max-width: $breakpoint-large) {
+      @include flex-row;
+      align-items: center;
+      padding: 0;
+      gap: $margin-large;
     }
 
-    @media screen and (max-width: 768px) {
-      display: none;
+    @media screen and (max-width: $breakpoint-small) {
     }
 
     & a {
       @include link;
-      margin-bottom: $margin-default;
-      color: $text-color-white;
+      color: $color-primary;
       font-size: $font-size-medium;
       text-transform: uppercase;
 
-      @media screen and (max-width: 768px) {
-        font-size: $font-size-large;
+      &.active {
+        color: $color-tertiary;
+      }
+
+      @media screen and (max-width: $breakpoint-large) {
+        font-size: $font-size-default;
+      }
+      @media screen and (max-width: $breakpoint-small) {
+        font-size: $font-size-default;
       }
 
       &:hover {
         color: $color-tertiary;
-      }
-    }
-  }
-
-  .hamburger {
-    display: none;
-    cursor: pointer;
-
-    &.open {
-      visibility: hidden;
-    }
-
-    @media screen and (max-width: 768px) {
-      display: block;
-      margin-right: $margin-small;
-      padding: 0.8em 1.3em;
-      background: $color-primary;
-      border: 1px solid $color-secondary;
-      color: $color-secondary;
-      cursor: pointer;
-      font: {
-        family: 'Montserrat';
-        size: 0.8rem;
-        weight: 700;
-        color: $text-color-black;
-      }
-      text-transform: uppercase;
-
-      &:hover {
-        background-color: $color-tertiary;
       }
     }
   }

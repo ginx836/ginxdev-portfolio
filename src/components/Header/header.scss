@@ -22,22 +22,28 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 $margin-large;
+    margin-top: $margin-medium;
   }
 
   @media screen and (max-width: $breakpoint-small) {
     padding: 0 $margin-medium;
+    margin-top: 0;
   }
 
   .header__logo {
     @include link;
     @include flex-column-center-center;
 
-    font-size: $font-size-main-title;
+    font-size: $font-size-logo;
     color: $color-primary;
 
     @media screen and (max-width: $breakpoint-large) {
       height: $margin-header-mobile;
-      font-size: $font-size-xlarge;
+      font-size: $font-size-logo;
+    }
+
+    @media screen and (max-width: $breakpoint-small) {
+      font-size: $font-size-logo-mobile;
     }
   }
 

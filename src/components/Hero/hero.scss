@@ -2,28 +2,44 @@
 
 .hero {
   @include flex-row-center-center;
-  min-height: 40rem;
-  // border: 10px solid red;
   padding: $margin-xlarge;
+  margin: $margin-xlarge 0;
+  flex: 1;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-xlarge) {
+  padding: $margin-large;
+  }
+
+  @media screen and (max-width: $breakpoint-large) {
     @include flex-column;
-    padding: $margin-small;
+    margin-top: $margin-header-mobile; 
   }
 }
 
 .hero__description {
   @include flex-column;
-  // border: 10px solid blue;
+  width: 50%;
+
+  @media screen and (max-width: $breakpoint-large) {
+    width: 100%;
+  }
 }
 
 .hero__picture {
-  width: 500px;
+  width: 50em;
   object-fit: center;
   margin-right: $margin-xlarge;
-  // border: 10px solid red;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-xlarge) {
+    width: 50%;
+  }
+
+  @media screen and (max-width: $breakpoint-large) {
+    width: 50%;
+    margin: $margin-small;
+  }
+
+  @media screen and (max-width: $breakpoint-medium) {
     width: 50%;
     margin-right: 0;
     margin-bottom: $margin-small;
@@ -35,12 +51,41 @@
   font-weight: 700;
   text-align: center;
 
-  // @media screen and (max-width: 768px) {
-  //   font-size: $font-size-xlarge;
-  // }
+  @media screen and (max-width: $breakpoint-xlarge) {
+    font-size: $font-size-logo;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    font-size: $font-size-xlarge;
+  }
 }
 
 .hero__text {
   text-align: center;
   line-height: 1.5;
+  font-size: $font-size-large;
+  margin-bottom: $margin-large;
+
+  @media screen and (max-width: $breakpoint-xlarge) {
+    font-size: $font-size-medium;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    font-size: $font-size-default;
+  }
+}
+
+.hero__subtitle {
+  font-size: $font-size-large;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: $margin-medium;
+}
+
+.hero__subtitle2 {
+  font-size: $font-size-large;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: $margin-large;
+  color: $color-tertiary;
 }

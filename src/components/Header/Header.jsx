@@ -53,7 +53,7 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     <header className="header">
       <div className="header__wrapper">
         <h1 to="/" className="header__logo">
-          GD
+          GD.
         </h1>
         <nav className="header__nav">
           {navLinks.map((link, index) =>

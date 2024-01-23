@@ -14,23 +14,39 @@
 
 .about__content {
   @include flex-row-center-center;
-  width: 50%;
-  // border: 10px solid violet;
+  width: 70%;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $breakpoint-xlarge),
+         screen and (max-width: $breakpoint-medium) {
     width: 100%;
+  }
+
+  @media screen and (max-width: $breakpoint-large) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: $breakpoint-medium) {
     flex-direction: column;
   }
 }
 
 .about__text {
-  width: 50%;
-  // border: 10px solid violet;
-  padding: $margin-large;
+  width: 70%;
+  padding: $margin-xlarge;
   line-height: 1.5;
+  font-size: $font-size-medium;
+  text-align: justify;
 
-  @media screen and (max-width: 768px) {
-    width: 80%;
+  @media screen and (max-width: $breakpoint-large),
+         screen and (max-width: $breakpoint-medium) {
+    width: 90%;
+    font-size: $font-size-default;
+    
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 100%;
+    padding: $margin-large;
   }
 }
 

@@ -14,10 +14,8 @@ const Home = () => {
         title="GINXDEV."
         text={
           <>
-            Bonjour, je suis Cédric Bourquin, développeur web orienté{' '}
-            <Front-End></Front-End>. <br /> Mon objectif est de vous aider à
-            réaliser vos projets web.
-            <br />
+            Bonjour, je suis Cédric Bourquin, développeur web orienté. <br />
+            Mon objectif est de vous aider à réaliser vos projets web. <br />
           </>
         }
         subtitle={<>Design, develop & deploy</>}
@@ -29,18 +27,9 @@ const Home = () => {
         title="About me"
         text={
           <>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque,
-            laboriosam dolorem incidunt nulla culpa pariatur provident,
-            obcaecati nobis vel quia ducimus quas ea ratione, eos fugiat? Quae
-            sit eius rerum itaque eum, explicabo omnis quasi ab autem ipsum
-            accusamus vel vero sed harum incidunt quidem asperiores quaerat, in
-            temporibus recusandae. Quisquam, quos. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Eaque, laboriosam dolorem incidunt
-            nulla culpa pariatur provident, obcaecati nobis vel quia ducimus
-            quas ea ratione, eos fugiat? Quae sit eius rerum itaque eum,
-            explicabo omnis quasi ab autem ipsum accusamus vel vero sed harum
-            incidunt quidem asperiores quaerat, in temporibus recusandae.
-            Quisquam, quos.
+            Né au début de l&apos;ère des premiers ordinateurs personnels, j&apos;ai grandi avec la technologie et cette passion ne m&apos;a jamais quitté. 
+            <br /> &quot;Tech Enthusiast&quot; depuis toujours, j&apos;ai décidé de me lancer dans le développement web en 2023 après 21 ans de commerce au service de mes clients.
+            <br /> Grâce à OpenClassrooms j&apos;ai pu mettre mon 1er pied à l&apos;étrier.<br/><br/> Mon objectif : Continuer à apprendre et de mettre mes compétences au service de vos projets. 
           </>
         }
         img={ProfilPicture}

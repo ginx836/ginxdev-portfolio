@@ -9,5 +9,18 @@
   &__text {
     @include flex-column-center-center;
     color: white;
+
+    @media screen and (max-width: $breakpoint-small) {
+      font-size: $font-size-small;
+    }
+  }
+
+  &__subtext {
+    color: $color-tertiary;
+    font-weight: 700;
+
+    @media screen and (max-width: $breakpoint-small) {
+      font-size: $font-size-small;
+    }
   }
 }

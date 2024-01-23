@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import './hero.scss'
 
 
@@ -13,6 +14,14 @@ const Hero = ({ title, text, picture, subtitle, subtitle2}) => {
       </section>
     </div>
   )
+}
+
+Hero.propTypes = {
+  title: PropTypes.string.isRequired,
+  text: PropTypes.object.isRequired,
+  picture: PropTypes.string.isRequired,
+  subtitle: PropTypes.object.isRequired,
+  subtitle2: PropTypes.object.isRequired,
 }
 
 export default Hero

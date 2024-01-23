@@ -16,7 +16,7 @@ const About = ({title, text, img}) => {
 
 About.propTypes = {
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.object.isRequired,
   img: PropTypes.string.isRequired,
 }
 

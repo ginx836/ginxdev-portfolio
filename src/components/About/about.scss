@@ -4,12 +4,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: $margin-xlarge;
+  margin-bottom: $margin-xxlarge;
 }
 
 .about__title {
   @include title;
-  margin-bottom: $margin-xlarge;
 }
 
 .about__content {
@@ -18,7 +17,7 @@
 
   @media screen and (max-width: $breakpoint-xlarge),
          screen and (max-width: $breakpoint-medium) {
-    width: 100%;
+    width: 90%;
   }
 
   @media screen and (max-width: $breakpoint-large) {
@@ -37,6 +36,11 @@
   font-size: $font-size-medium;
   text-align: justify;
 
+  @media screen and (max-width: $breakpoint-xlarge) {
+    padding: $margin-large;
+
+  }
+  
   @media screen and (max-width: $breakpoint-large),
          screen and (max-width: $breakpoint-medium) {
     width: 90%;
@@ -46,7 +50,7 @@
 
   @media screen and (max-width: $breakpoint-small) {
     width: 100%;
-    padding: $margin-large;
+    padding: $margin-large $margin-small;
   }
 }
 

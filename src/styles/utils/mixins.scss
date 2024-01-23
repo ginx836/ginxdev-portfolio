@@ -27,6 +27,7 @@
 @mixin title {
   font-size: $font-size-xlarge;
   font-weight: $font-weight-bold;
+  margin-bottom: $margin-xlarge;
 }
 
 @mixin link {

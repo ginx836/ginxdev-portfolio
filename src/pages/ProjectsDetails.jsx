@@ -1,6 +1,9 @@
-import data from '../data/projects.json'
 import { useParams } from 'react-router-dom'
 import Button from '../components/utils/Button/Button'
+import RenderObjectives from '../components/utils/RenderObjectives.jsx'
+import RenderPictures from '../components/utils/RenderPictures.jsx'
+import RenderTechnologies from '../components/utils/RenderTechnologies.jsx'
+import data from '../data/projects.json'
 
 import '../styles/pages/projectsDetails.scss'
 
@@ -8,50 +11,54 @@ const ActiveProject = () => {
   const { id } = useParams()
   const idNumber = parseInt(id, 10)
 
-  const projects = data.find((project) => project.id === idNumber)
-  if (projects === undefined) {
+  const project = data.find((project) => project.id === idNumber)
+  const projectIndex = data.findIndex((project) => project.id === idNumber)
+
+  const prevProject = projectIndex > 0 ? data[projectIndex - 1] : null
+  const nextProject =
+    projectIndex < data.length - 1 ? data[projectIndex + 1] : null
+
+  if (!project) {
     return <div>404</div>
   }
 
   return (
-    <>
-      <section key={projects.id} className="projects-details">
-        <h2 className="projects-details__title">{projects.header}</h2>
-        {projects.pictures && (
-        <div className="picture-container">
-          {projects.pictures.map((picture, index) => (
-            <img
-              key={index}
-              src={picture}
-              alt={`${projects.header} ${index}`}
-              className="picture-container__img"
-            />
-          ))}
-        </div>
-        )}
-        <div className="projects-details-body">
-          <h3 className="projects-details-body__title">
-            {projects.body_title}
-          </h3>
-          <hr />
-          <p className="projects-details-body__description">
-            {projects.description}
-          </p>
-        </div>
-        <div className="projects-details__link">
+    <section key={project.id} className="projects">
+      <RenderPictures project={project} />
+      <div className="projects-body">
+        <h2 className="projects-header">{project.header}</h2>
+        <h3 className="projects-subtitle">{project.body_title}</h3>
+        <p className="projects-description">{project.description}</p>
+        <RenderObjectives project={project} />
+        <RenderTechnologies technologies={project.technologies} />
+        <div className="projects-link">
           <Button
             buttonText="Lien vers Github"
-            onClick={() => window.open(projects.link, '_blank')}
+            onClick={() => window.open(project.link, '_blank')}
           />
-          {projects.link2 && (
+          {project.link2 && (
             <Button
               buttonText="Lien vers le site"
-              onClick={() => window.open(projects.link2, '_blank')}
+              onClick={() => window.open(project.link2, '_blank')}
             />
           )}
         </div>
-      </section>
-    </>
+      <div className="projects-navigation">
+        {prevProject && (
+          <Button
+            buttonText="Précédent"
+            onClick={() => window.open(`/projects/${prevProject.id}`, '_self')}
+          />
+        )}
+        {nextProject && (
+          <Button
+            buttonText="Suivant"
+            onClick={() => window.open(`/projects/${nextProject.id}`, '_self')}
+          />
+        )}
+      </div>
+      </div>
+    </section>
   )
 }
 

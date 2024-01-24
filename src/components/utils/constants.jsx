@@ -1,0 +1,33 @@
+import {
+  ChromeOriginal,
+  Css3Original,
+  GitOriginal,
+  GithubOriginal,
+  GoogleOriginal,
+  Html5Original,
+  JavascriptOriginal,
+  ReactOriginal,
+  ReactrouterOriginal,
+  SassOriginal,
+  NodejsOriginalWordmark,
+  ExpressOriginal,
+  MongodbOriginalWordmark,
+  MongooseOriginal,
+} from 'devicons-react'
+
+export const TECHNOLOGIES = {
+  Html5Original: Html5Original,
+  Css3Original: Css3Original,
+  GithubOriginal: GithubOriginal,
+  GitOriginal: GitOriginal,
+  JavascriptOriginal: JavascriptOriginal,
+  GoogleOriginal: GoogleOriginal,
+  ChromeOriginal: ChromeOriginal,
+  ReactOriginal: ReactOriginal,
+  ReactrouterOriginal: ReactrouterOriginal,
+  SassOriginal: SassOriginal,
+  NodejsOriginalWordmark: NodejsOriginalWordmark,
+  ExpressOriginal: ExpressOriginal,
+  MongodbOriginalWordmark: MongodbOriginalWordmark,
+  MongooseOriginal: MongooseOriginal,
+}

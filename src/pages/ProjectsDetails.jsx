@@ -30,7 +30,7 @@ const ActiveProject = () => {
         <h3 className="projects-subtitle">{project.body_title}</h3>
         <p className="projects-description">{project.description}</p>
         <RenderObjectives project={project} />
-        <RenderTechnologies technologies={project.technologies} />
+        <RenderTechnologies technologies={project.technologies} size={50}/>
         <div className="projects-link">
           <Button
             buttonText="Lien vers Github"

@@ -73,12 +73,13 @@
     "id": 3,
     "header": "Kasa",
     "body_title": "Création d'une application React avec une API",
-    "description": "Il s'agit de ma 1ère application en REACT.\nL'application devait permettre de réserver des logements.\n L'objectif du projet était de construite l'application avec CRA/React, récupérer les données via une API, et animer certains composants.\nL'ensemble devait s'adapter à tous les formats d'écrans.",
+    "description": "L'application devait permettre de réserver des logements.\n L'objectif du projet était de construite l'application avec CRA/React, récupérer les données via une API, et animer certains composants.\nL'ensemble devait s'adapter à tous les formats d'écrans.\n\n Il s'agit de ma 1ère application en REACT.\n Travailler avec la librairie à été extrêmement challengeant mais très enrichissant.\n J'ai pu découvrir le fonctionnement de React, ses avantages et ses inconvénients.\n\nLe point de difficulté sur ce projet aura été la gestion des données externes des logements et comment bien les manipuler.\n\n Afin de me permettre de pouvoir les utiliser à travers l'ensemble de l'application, j'ai mis en place un contexte qui me permet de les récupérer et de les utiliser dans les composants qui en ont besoin plutôt que les passer en props.\n Ceci m' a permis de garder un code plus propre et plus lisible.",
     "colour": "#ebb523",
     "objectifs": [
       "Développer une interface utilisateur avec React et Sass",
-      "RConfigurer la navigation avec React Router",
+      "Configurer la navigation avec React Router",
       "Animer des composants en CSS",
+      "Récupérer des données de l'API",
       "Adapter l'application à tous les formats d'écrans"
     ],
     "technologies": ["ReactOriginal","ReactrouterOriginal", "SassOriginal"],
@@ -94,7 +95,7 @@
     "id": 4,
     "header": "Mon Vieux Grimoire",
     "body_title": "Développement du back-end avec Node.js, Express et MongoDB",
-    "description": "Il s'agit de mon 1er projet back-end.\nL'objectif était de développer le back-end d'un site de partage de livres.\nLe projet devait être réalisé avec Node.js, Express et MongoDB.",
+    "description": "L'objectif était de développer le back-end d'un site de partage de livres.\nLe projet devait être réalisé avec Node.js, Express et MongoDB.\nIl s'agit de mon 1er projet back-end.\n\n Ce projet m'a permis de découvrir le fonctionnement côté serveur.\n\n Le point de challenge sur ce projet aura été sur les controlleurs qui gèrent les opérations CRUD. Cela m'a challengé sur la manière de structurer le code et de le rendre plus lisible et maintenable tout en étant vigilant sur la logique d'écriture des fonctions.",
     "colour": "#ebb523",
     "objectifs": [
       "Créer un serveur Node.js avec Express",

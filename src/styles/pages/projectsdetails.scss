@@ -34,7 +34,7 @@
   &-link {
     @include flex-row-center-center;
     gap: 2em;
-    margin-bottom: $margin-xlarge;
+    margin-bottom: $margin-large;
   }
 
   @media screen and (max-width: $breakpoint-xlarge) {
@@ -140,10 +140,9 @@
 
 .technologies-container {
   background: $color-primary;
-  border-radius: 50px;
   margin-bottom: $margin-xlarge;
   white-space: pre-line;
-  width: 100%;
+  width: auto;
   padding: $margin-small;
 
   & ul {

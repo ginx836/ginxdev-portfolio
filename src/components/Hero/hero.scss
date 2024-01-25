@@ -5,6 +5,8 @@
   padding: $margin-xlarge;
   margin: $margin-xlarge 0;
   flex: 1;
+  animation: slideInBounce 2s ease-out forwards;
+
 
   @media screen and (max-width: $breakpoint-xlarge) {
   padding: $margin-large;
@@ -94,4 +96,18 @@
   @include flex-row-center-center;
   margin-bottom: $margin-large;
   gap: $margin-large;
+}
+
+@keyframes slideInBounce {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

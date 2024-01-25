@@ -10,7 +10,7 @@
   padding-top: $margin-xlarge;
   padding-bottom: $margin-large;
   background-color: $color-secondary;
-  border-right: 1px solid $color-tertiary;
+  // border-right: 1px solid $color-tertiary;
 
   @include flex-column;
   justify-content: space-between;

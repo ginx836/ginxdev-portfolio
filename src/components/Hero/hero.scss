@@ -89,3 +89,9 @@
   margin-bottom: $margin-large;
   color: $color-tertiary;
 }
+
+.hero__social {
+  @include flex-row-center-center;
+  margin-bottom: $margin-large;
+  gap: $margin-large;
+}

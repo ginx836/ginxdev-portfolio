@@ -1,0 +1,54 @@
+@import '../../styles/utils/variables';
+
+.contact {
+  @include flex-column-center-center;
+  height: 100vh;
+}
+
+.form {
+  @include flex-column;
+  width: 100%;
+  max-width: 50%;
+  height: auto;
+  // border: 10px solid blue;
+
+  &__title {
+    @include title;
+    text-align: center;
+  }
+}
+
+.form__group {
+  @include flex-column;
+  padding: $margin-medium;
+
+  .form__label {
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    font-variant: small-caps;
+    margin-bottom: $margin-medium;
+    border-bottom: 1px solid $color-tertiary;
+  }
+
+  .form__input {
+    width: 100%;
+    height: $font-size-xlarge;
+    font-size: $font-size-medium;
+    margin-bottom: $margin-large;
+  }
+
+  .form__textarea {
+    width: 100%;
+    height: 10rem;
+    font-size: $font-size-medium;
+    margin-bottom: $margin-large;
+  }
+}
+
+.sendEmailMessage {
+  font-style: italic;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-medium;
+  margin-bottom: $margin-large;
+  color: $color-tertiary;
+}

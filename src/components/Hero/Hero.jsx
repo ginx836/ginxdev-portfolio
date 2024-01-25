@@ -1,9 +1,13 @@
-import { LinkedinPlain, GithubOriginal } from 'devicons-react'
+import { GithubOriginal, LinkedinPlain } from 'devicons-react'
+import { useNavigate } from 'react-router-dom'
+import Button from '../utils/Button/Button'
 
 import PropTypes from 'prop-types'
 import './hero.scss'
 
 const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
+  const navigate = useNavigate()
+
   return (
     <div className="hero">
       <img className="hero__picture" src={picture} alt="Avatar" />
@@ -27,6 +31,11 @@ const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
           >
             <GithubOriginal style={{ filter: 'invert(100%)' }} size={60} />
           </a>
+          <Button
+            buttonText="Contact"
+            type="button"
+            onClick={() => navigate('/contact')}
+          />
         </div>
       </section>
     </div>

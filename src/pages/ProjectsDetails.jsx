@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import Button from '../components/utils/Button/Button'
 import RenderObjectives from '../components/utils/RenderObjectives.jsx'
 import RenderPictures from '../components/utils/RenderPictures.jsx'
@@ -19,7 +19,7 @@ const ActiveProject = () => {
     projectIndex < data.length - 1 ? data[projectIndex + 1] : null
 
   if (!project) {
-    return <div>404</div>
+    return <Navigate to="/404" />
   }
 
   return (
@@ -43,20 +43,24 @@ const ActiveProject = () => {
             />
           )}
         </div>
-      <div className="projects-navigation">
-        {prevProject && (
-          <Button
-            buttonText="Précédent"
-            onClick={() => window.open(`/projects/${prevProject.id}`, '_self')}
-          />
-        )}
-        {nextProject && (
-          <Button
-            buttonText="Suivant"
-            onClick={() => window.open(`/projects/${nextProject.id}`, '_self')}
-          />
-        )}
-      </div>
+        <div className="projects-navigation">
+          {prevProject && (
+            <Button
+              buttonText="Précédent"
+              onClick={() =>
+                window.open(`/projects/${prevProject.id}`, '_self')
+              }
+            />
+          )}
+          {nextProject && (
+            <Button
+              buttonText="Suivant"
+              onClick={() =>
+                window.open(`/projects/${nextProject.id}`, '_self')
+              }
+            />
+          )}
+        </div>
       </div>
     </section>
   )

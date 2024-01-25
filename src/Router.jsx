@@ -23,6 +23,10 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
+        path: '/404',
+        element: <NotFound />,
+      },
+      {
         path: '*',
         element: <NotFound />,
       },

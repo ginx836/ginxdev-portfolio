@@ -1,6 +1,7 @@
-import './carousel.scss'
+import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import './carousel.scss'
 
 const Carousel = ({ data }) => {
   const [activeID, setActiveID] = useState(0)
@@ -33,14 +34,14 @@ const Panel = ({ data, panelStyle, buttonStyle, toggleButtonColour }) => (
     <h2 className="panel-header">{data.header}</h2>
     <p className="panel-info">{data.body_title}</p>
     <NavLink to={`/projects/${data.id}`}>
-    <button
-      className="panel-button"
-      style={buttonStyle}
-      onMouseEnter={toggleButtonColour}
-      onMouseLeave={toggleButtonColour}
-    >
-      En voir d&apos;avantage
-    </button>
+      <button
+        className="panel-button"
+        style={buttonStyle}
+        onMouseEnter={toggleButtonColour}
+        onMouseLeave={toggleButtonColour}
+      >
+        En voir d&apos;avantage
+      </button>
     </NavLink>
   </aside>
 )
@@ -64,5 +65,45 @@ const Selector = ({ handleClick, isActive }) => (
     onClick={handleClick}
   ></div>
 )
+
+Carousel.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      img: PropTypes.string.isRequired,
+      colour: PropTypes.string.isRequired,
+      header: PropTypes.string.isRequired,
+      body_title: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+}
+
+Panel.propTypes = {
+  data: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    img: PropTypes.string.isRequired,
+    colour: PropTypes.string.isRequired,
+    header: PropTypes.string.isRequired,
+    body_title: PropTypes.string.isRequired,
+  }).isRequired,
+  panelStyle: PropTypes.object.isRequired,
+  buttonStyle: PropTypes.object.isRequired,
+  toggleButtonColour: PropTypes.func.isRequired,
+}
+
+Selectors.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    }),
+  ).isRequired,
+  activeID: PropTypes.number.isRequired,
+  changeActive: PropTypes.func.isRequired,
+}
+
+Selector.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+  isActive: PropTypes.bool.isRequired,
+}
 
 export default Carousel

@@ -18,6 +18,7 @@ const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
             href="https://www.linkedin.com/in/cedric-bourquin-092a8a250/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
           >
             <LinkedinPlain color="white" size={60} />
           </a>
@@ -25,6 +26,7 @@ const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
             href="https://github.com/ginx836"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Github"
           >
             <GithubOriginal style={{ filter: 'invert(100%)' }} size={60} />
           </a>

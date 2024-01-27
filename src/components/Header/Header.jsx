@@ -1,14 +1,10 @@
-import { useEffect, useState } from 'react'
-import { NavLink } from 'react-router-dom'
-import PropTypes from 'prop-types'
 import { LinkedinPlain } from 'devicons-react'
 import GithubcodespacesPlain from 'devicons-react/lib/icons/GithubcodespacesPlain'
+import PropTypes from 'prop-types'
+import { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
 
-const NavLinkItem = ({ to, children }) => (
-  <NavLink to={to}>
-    {children}
-  </NavLink>
-)
+const NavLinkItem = ({ to, children }) => <NavLink to={to}>{children}</NavLink>
 
 NavLinkItem.propTypes = {
   to: PropTypes.string.isRequired,
@@ -16,7 +12,7 @@ NavLinkItem.propTypes = {
 }
 
 const Header = () => {
-const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
@@ -35,6 +31,7 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth)
         ) : (
           'LinkedIn'
         ),
+      textName: 'LinkedIn',
       isExternal: true,
     },
     {
@@ -45,6 +42,7 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth)
         ) : (
           'Github'
         ),
+      textName: 'Github',
       isExternal: true,
     },
   ]
@@ -63,6 +61,7 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth)
                 href={link.to}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={link.textName}
               >
                 {link.name}
               </a>

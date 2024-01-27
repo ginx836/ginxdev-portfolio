@@ -1,13 +1,75 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ginxdev - Portfolio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio de Cedric Bourquin, développeur web spécialisé en front-end" />
+  <meta name="keywords" content="Ginxdev, Portfolio, Développeur Web, React.js, Node.js, Ginxdev, Cedric Bourquin" />
+  <meta name="author" content="Ginxdev, Cedric Bourquin" />
+
+  <!-- Balises Open Graph -->
+  <meta property="og:title" content="Ginxdev - Portfolio de Cédric Bourquin" />
+  <meta property="og:description" content="Développeur web spécialisé en front-end" />
+  <meta property=" og:image" content="https://ginxdev-portfolio.vercel.app/assets/profil-picture-f2f0nUZ0.webp" />
+  <meta property="og:url" content="https://ginxdev-portfolio.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="Ginxdev - Portfolio de Cédric Bourquin" />
+
+  <!-- Balises Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ginxdev - Portfolio de Cédric Bourquin" />
+  <meta name="twitter:description" content="Développeur web spécialisé en front-end" />
+  <meta name="twitter:image" content="https://ginxdev-portfolio.vercel.app/assets/profil-picture-f2f0nUZ0.webp" />
+  <meta name="twitter:url" content="https://ginxdev-portfolio.vercel.app/" />
+
+  <title>Ginxdev - Portfolio</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+<!-- Balises JSON-LD -->
+<script type="application/ld+json">
+	{
+	  "@context": "https://schema.org",
+	  "@type": ["LocalBusiness", "ProfessionalService"],
+	  "name": "Ginxdev développement web - Cédric Bourquin",
+	  "description": "Bonjour, je suis Cédric Bourquin, développeur web orienté Front-End. Mon objectif est de vous aider à réaliser vos projets web.",
+	  "image": "https://ginxdev-portfolio.vercel.app/assets/profil-picture-f2f0nUZ0.webp",
+	  "url": "https://ginxdev-portfolio.vercel.app/",
+	  "telephone": "0661217242",
+	  "address": {
+	    "@type": "PostalAddress",
+	    "streetAddress": "20 rue d'Alsace",
+	    "postalCode": "89000",
+	    "addressCountry": "FR",
+	    "addressLocality": "Auxerre"
+	  },
+	  "geo": {
+	    "@type": "GeoCoordinates",
+	    "latitude": "47.806557",
+	    "longitude": "3.562263"
+	  },
+	  "openingHoursSpecification": {
+	    "@type": "OpeningHoursSpecification",
+	    "dayOfWeek": [
+	      "Lundi",
+	      "Mardi",
+	      "Mercredi",
+	      "Jeudi",
+	      "Vendredi"
+	    ],
+	    "opens": "10:00",
+	    "closes": "19:00"
+	  },
+    "priceRange": "A définir en fonction du projet"
+	}		
+	</script>
+
 </html>

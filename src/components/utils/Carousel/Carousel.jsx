@@ -29,6 +29,10 @@ const Carousel = ({ data }) => {
   )
 }
 
+Carousel.propTypes = {
+  data: PropTypes.array.isRequired,
+}
+
 const Panel = ({ data, panelStyle, buttonStyle, toggleButtonColour }) => (
   <aside className="panel" style={panelStyle}>
     <h2 className="panel-header">{data.header}</h2>
@@ -46,6 +50,13 @@ const Panel = ({ data, panelStyle, buttonStyle, toggleButtonColour }) => (
   </aside>
 )
 
+Panel.propTypes = {
+  data: PropTypes.object.isRequired,
+  panelStyle: PropTypes.object.isRequired,
+  buttonStyle: PropTypes.object.isRequired,
+  toggleButtonColour: PropTypes.func.isRequired,
+}
+
 const Selectors = ({ data, activeID, changeActive }) => (
   <div className="selectors">
     {data.map((item) => (
@@ -59,47 +70,18 @@ const Selectors = ({ data, activeID, changeActive }) => (
   </div>
 )
 
+Selectors.propTypes = {
+  data: PropTypes.array.isRequired,
+  activeID: PropTypes.number.isRequired,
+  changeActive: PropTypes.func.isRequired,
+}
+
 const Selector = ({ handleClick, isActive }) => (
   <div
     className={`selector ${isActive ? 'active' : ''}`}
     onClick={handleClick}
   ></div>
 )
-
-Carousel.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      img: PropTypes.string.isRequired,
-      colour: PropTypes.string.isRequired,
-      header: PropTypes.string.isRequired,
-      body_title: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-}
-
-Panel.propTypes = {
-  data: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    img: PropTypes.string.isRequired,
-    colour: PropTypes.string.isRequired,
-    header: PropTypes.string.isRequired,
-    body_title: PropTypes.string.isRequired,
-  }).isRequired,
-  panelStyle: PropTypes.object.isRequired,
-  buttonStyle: PropTypes.object.isRequired,
-  toggleButtonColour: PropTypes.func.isRequired,
-}
-
-Selectors.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-    }),
-  ).isRequired,
-  activeID: PropTypes.number.isRequired,
-  changeActive: PropTypes.func.isRequired,
-}
 
 Selector.propTypes = {
   handleClick: PropTypes.func.isRequired,

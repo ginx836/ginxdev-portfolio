@@ -3,48 +3,35 @@ import PropTypes from 'prop-types'
 const RenderPictures = ({ project }) => {
   if (!project.pictures || project.pictures.length === 0) return null
 
-  const pictureRows = []
-  let rowIndex = 0
-
-  // Render the first row with a single image
-  pictureRows.push(
-    <div className="picture-row" key={rowIndex++}>
-      <img
-        src={project.pictures[0]}
-        alt={`${project.header} 0`}
-        className="picture-img img-full"
-      />
-    </div>,
-  )
-
-  // Render subsequent rows with 1 or 2 images
-  for (let i = 1; i < project.pictures.length; i += 2) {
-    const pictureRow = (
-      <div className="picture-row" key={rowIndex++}>
+  return (
+    <div className="picture-container">
+      <div className="picture-row row-0">
         <img
-          src={project.pictures[i]}
-          alt={`${project.header} ${i}`}
-          className="picture-img img-half"
+          src={project.pictures[0]}
+          alt={`${project.header} 0`}
+          className="picture-img img-full"
         />
-        {i + 1 < project.pictures.length && (
-          <img
-            src={project.pictures[i + 1]}
-            alt={`${project.header} ${i + 1}`}
-            className="picture-img img-half"
-          />
-        )}
       </div>
-    )
-    pictureRows.push(pictureRow)
-  }
-
-  return <div className="picture-container">{pictureRows}</div>
+      {project.pictures.length > 1 && (
+        <div className="picture-row row-1">
+          {project.pictures.slice(1, 3).map((picture, index) => (
+            <img
+              src={picture}
+              alt={`${project.header} ${index + 1}`}
+              className={`picture-img img-half ${index === 1 ? 'third-img' : ''}`}
+              key={index + 1}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  )
 }
 
 RenderPictures.propTypes = {
   project: PropTypes.shape({
-    pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
     header: PropTypes.string.isRequired,
+    pictures: PropTypes.arrayOf(PropTypes.string).isRequired,
   }).isRequired,
 }
 

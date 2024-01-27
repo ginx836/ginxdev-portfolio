@@ -1,11 +1,11 @@
-import { Navigate, useParams } from 'react-router-dom'
+import { NavLink, Navigate, useParams } from 'react-router-dom'
 import Button from '../components/utils/Button/Button'
 import RenderObjectives from '../components/utils/RenderObjectives.jsx'
 import RenderPictures from '../components/utils/RenderPictures.jsx'
 import RenderTechnologies from '../components/utils/RenderTechnologies.jsx'
 import data from '../data/projects.json'
 
-import '../styles/pages/projectsDetails.scss'
+import '../styles/pages/projectsdetails.scss'
 
 const ActiveProject = () => {
   const { id } = useParams()
@@ -21,44 +21,47 @@ const ActiveProject = () => {
   if (!project) {
     return <Navigate to="/404" />
   }
-
   return (
     <section key={project.id} className="projects">
       <RenderPictures project={project} />
+
       <div className="projects-body">
         <h2 className="projects-header">{project.header}</h2>
         <h3 className="projects-subtitle">{project.body_title}</h3>
         <p className="projects-description">{project.description}</p>
+
         <RenderObjectives project={project} />
-        <RenderTechnologies technologies={project.technologies} size={50}/>
+        <RenderTechnologies technologies={project.technologies} size={50} />
+
         <div className="projects-link">
-          <Button
-            buttonText="Lien vers Github"
-            onClick={() => window.open(project.link, '_blank')}
-          />
-          {project.link2 && (
-            <Button
-              buttonText="Lien vers le site"
-              onClick={() => window.open(project.link2, '_blank')}
-            />
-          )}
-        </div>
-        <div className="projects-navigation">
           {prevProject && (
-            <Button
-              buttonText="Précédent"
-              onClick={() =>
-                window.open(`/projects/${prevProject.id}`, '_self')
-              }
-            />
+            <NavLink
+              to={`/projects/${prevProject.id}`}
+              className="button NavButton"
+            >
+              Précédent
+            </NavLink>
           )}
-          {nextProject && (
-            <Button
-              buttonText="Suivant"
-              onClick={() =>
-                window.open(`/projects/${nextProject.id}`, '_self')
-              }
-            />
+
+          <Button
+            className="LinkButton"
+            buttonText="Github"
+            href={project.link}
+          />
+
+          {project.link2 && <Button buttonText="site" href={project.link2} />}
+
+          {nextProject ? (
+            <NavLink
+              to={`/projects/${nextProject.id}`}
+              className="button NavButton"
+            >
+              Suivant
+            </NavLink>
+          ) : (
+            <NavLink to="/projects/0" className="button NavButton">
+              Suivant
+            </NavLink>
           )}
         </div>
       </div>

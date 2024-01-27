@@ -3,6 +3,14 @@
 .contact {
   @include flex-column-center-center;
   height: 100vh;
+
+  .sendEmailMessage {
+    font-style: italic;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-medium;
+    margin-bottom: $margin-large;
+    color: $color-tertiary;
+  }
 }
 
 .form {
@@ -10,45 +18,58 @@
   width: 100%;
   max-width: 50%;
   height: auto;
-  // border: 10px solid blue;
 
   &__title {
     @include title;
     text-align: center;
   }
-}
 
-.form__group {
-  @include flex-column;
-  padding: $margin-medium;
-
-  .form__label {
-    font-size: $font-size-large;
-    font-weight: $font-weight-bold;
-    font-variant: small-caps;
-    margin-bottom: $margin-medium;
-    border-bottom: 1px solid $color-tertiary;
+  @media screen and (max-width: $breakpoint-xlarge) {
+    max-width: 90%;
+    padding: $margin-medium;
   }
 
-  .form__input {
-    width: 100%;
-    height: $font-size-xlarge;
-    font-size: $font-size-medium;
-    margin-bottom: $margin-large;
+  @media screen and (max-width: $breakpoint-small) {
+    max-width: 100%;
+    padding: $margin-medium;
+
+    &__title {
+      font-size: $font-size-large;
+    }
   }
 
-  .form__textarea {
-    width: 100%;
-    height: 10rem;
-    font-size: $font-size-medium;
-    margin-bottom: $margin-large;
-  }
-}
+  .form__group {
+    @include flex-column;
+    padding: $margin-medium;
 
-.sendEmailMessage {
-  font-style: italic;
-  font-weight: $font-weight-bold;
-  font-size: $font-size-medium;
-  margin-bottom: $margin-large;
-  color: $color-tertiary;
+    .form__label {
+      font-size: $font-size-large;
+      font-weight: $font-weight-bold;
+      font-variant: small-caps;
+      margin-bottom: $margin-medium;
+      border-bottom: 1px solid $color-tertiary;
+    }
+
+    .form__input {
+      width: 100%;
+      height: $font-size-xlarge;
+      font-size: $font-size-medium;
+      margin-bottom: $margin-large;
+    }
+
+    .form__textarea {
+      width: 100%;
+      height: 10rem;
+      font-size: $font-size-medium;
+      margin-bottom: $margin-large;
+    }
+
+    @media screen and (max-width: $breakpoint-medium) {
+      padding: $margin-medium 0;
+
+      .form__label {
+        font-size: $font-size-medium;
+      }
+    }
+  }
 }

@@ -47,7 +47,11 @@ const Contact = () => {
             <textarea className="form__textarea" name="message" />
           </div>
         </form>
-        {isSubmitting && <p className='sendEmailMessage'>Envoi en cours, veuillez patienter...</p>}
+        {isSubmitting && (
+          <p className="sendEmailMessage">
+            Envoi en cours, veuillez patienter...
+          </p>
+        )}
         <Button onClick={sendEmail} buttonText="Envoyer" type="submit" />
       </div>
     </>

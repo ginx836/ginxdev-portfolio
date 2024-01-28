@@ -1,9 +1,13 @@
-import Hero from '../components/Hero/Hero'
-import Projects from '../components/ProjectsWrapper/Projects'
-import About from '../components/About/About'
-import Footer from '../components/Footer/Footer'
+import { NavLink } from 'react-router-dom'
 import HeroPicture from '../assets/Hero/hero-picture.svg'
 import ProfilPicture from '../assets/profil-picture.webp'
+import About from '../components/About/About'
+import CardSlider from '../components/CardSlider/CardSlider'
+import Footer from '../components/Footer/Footer'
+import Hero from '../components/Hero/Hero'
+import Button from '../components/utils/Button/Button'
+import SectionDivider from '../components/utils/SectionDivider'
+import data from '../data/projects.json'
 
 import '../styles/pages/home.scss'
 
@@ -14,7 +18,8 @@ const Home = () => {
         title="GINXDEV."
         text={
           <>
-            Bonjour, je suis Cédric Bourquin, développeur web orienté Front-End. <br />
+            Bonjour, je suis Cédric Bourquin, développeur web junior.
+            <br />
             Mon objectif est de vous aider à réaliser vos projets web. <br />
           </>
         }
@@ -22,7 +27,14 @@ const Home = () => {
         subtitle2={<>Keep moving forward</>}
         picture={HeroPicture}
       />
-      <Projects />
+      <SectionDivider title="Mes projets" />
+      <CardSlider data={data} />
+      <div className="btn-projects-container">
+        <NavLink to="/projects/0" onClick={() => window.scrollTo(0, 0)}>
+          <Button buttonText="Voir tous les projets" />
+        </NavLink>
+      </div>
+      <SectionDivider id="aboutme" title="A propos de moi" />
       <About
         title="A propos de moi"
         text={

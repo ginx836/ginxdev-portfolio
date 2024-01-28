@@ -7,10 +7,6 @@
   margin-bottom: $margin-xxlarge;
 }
 
-.about__title {
-  @include title;
-}
-
 .about__content {
   @include flex-row-center-center;
   width: 70%;
@@ -34,7 +30,6 @@
   padding: $margin-xlarge;
   line-height: 1.5;
   font-size: $font-size-medium;
-  text-align: justify;
 
   @media screen and (max-width: $breakpoint-xlarge) {
     padding: $margin-large;

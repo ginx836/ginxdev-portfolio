@@ -38,6 +38,7 @@ const ActiveProject = () => {
             <NavLink
               to={`/projects/${prevProject.id}`}
               className="button NavButton"
+              onClick={() => window.scrollTo(0, 0)}
             >
               Précédent
             </NavLink>
@@ -55,11 +56,16 @@ const ActiveProject = () => {
             <NavLink
               to={`/projects/${nextProject.id}`}
               className="button NavButton"
+              onClick={() => window.scrollTo(0, 0)}
             >
               Suivant
             </NavLink>
           ) : (
-            <NavLink to="/projects/0" className="button NavButton">
+            <NavLink
+              to="/projects/0"
+              className="button NavButton"
+              onClick={() => window.scrollTo(0, 0)}
+            >
               Suivant
             </NavLink>
           )}

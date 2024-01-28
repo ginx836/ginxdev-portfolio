@@ -1,0 +1,102 @@
+@import '../../styles/utils/variables.scss';
+
+#main-slider-container {
+  width: auto;
+  height: auto;
+  margin-bottom: $margin-xlarge;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scrollbar-width: none;
+
+}
+
+#slider {
+  width: calc(1200px + 2 * $margin-large);
+  height: 100%;
+  white-space: nowrap;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  margin-left: $margin-large;
+  margin-right: $margin-large;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: $breakpoint-xlarge) {
+    width: 840px;
+  }
+
+  @media screen and (max-width: $breakpoint-large) {
+    width: 420px;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 300px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.slider-icon.left,
+.slider-icon.right {
+  background-color: $color-primary;
+  border-radius: 100%;
+  color: $color-secondary;
+}
+
+.slider-icon.left:hover,
+.slider-icon.right:hover {
+  background: $color-tertiary;
+}
+
+.slider-card {
+  width: 400px;
+  height: auto;
+  background: $color-primary;
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px;
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: 280px;
+  }
+}
+
+.card-img {
+  width: 100%;
+  object-fit: cover;
+  background: $color-tertiary;
+  border: 1px solid lightgray;
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+
+  &-header {
+    width: 100%;
+    padding: 15px;
+    background: $color-tertiary;
+    color: $color-secondary;
+    font-size: $font-size-large;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin-top: $margin-large;
+  }
+
+  &-info {
+    width: auto;
+    height: 100px;
+    background: $color-primary;
+    color: $color-secondary;
+    font-size: $font-size-medium;
+    text-align: center;
+    margin-top: $margin-large;
+    white-space: normal;
+  }
+}

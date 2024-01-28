@@ -50,9 +50,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__wrapper">
-        <h1 to="/" className="header__logo">
-          GD.
-        </h1>
+        <div className="header__logo">GD.</div>
         <nav className="header__nav">
           {navLinks.map((link, index) =>
             link.isExternal ? (

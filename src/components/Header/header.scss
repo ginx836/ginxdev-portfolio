@@ -59,6 +59,7 @@
     }
 
     @media screen and (max-width: $breakpoint-small) {
+      gap: $margin-medium;
     }
 
     & a {
@@ -81,6 +82,9 @@
       &:hover {
         color: $color-tertiary;
       }
+    }
+    @media screen and (max-width: $breakpoint-xsmall) {
+      display: none;
     }
   }
 }

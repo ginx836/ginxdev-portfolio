@@ -1,1 +1,23 @@
+@import '../utils/variables.scss';
 
+.section-title {
+  @include title;
+  @include flex-column-center-center;
+  margin-bottom: $margin-xlarge;
+  text-align: center;
+}
+
+.btn-projects-container {
+  @include flex-row-center-center;
+  margin-top: $margin-large;
+  margin-bottom: $margin-xxlarge;
+
+  @media screen and (min-width: $breakpoint-medium) {
+    display: none;
+  }
+
+  @media screen and (max-width: $breakpoint-small) {
+    margin-top: 0;
+    margin-bottom: $margin-xlarge;
+  }
+}

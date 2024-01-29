@@ -6,14 +6,13 @@
   margin: $margin-xlarge 0;
   flex: 1;
 
-
   @media screen and (max-width: $breakpoint-xlarge) {
-  padding: $margin-large;
+    padding: $margin-large;
   }
 
   @media screen and (max-width: $breakpoint-large) {
     @include flex-column;
-    margin-top: $margin-header-mobile; 
+    margin-top: $margin-header-mobile;
   }
 }
 
@@ -96,5 +95,3 @@
   margin-bottom: $margin-large;
   gap: $margin-large;
 }
-
-

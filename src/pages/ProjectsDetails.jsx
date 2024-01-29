@@ -1,3 +1,8 @@
+import {
+  FaCircleChevronLeft,
+  FaCircleChevronRight,
+} from 'react-icons/fa6'
+import { FaHome } from 'react-icons/fa'
 import { NavLink, Navigate, useParams } from 'react-router-dom'
 import Button from '../components/utils/Button/Button'
 import RenderObjectives from '../components/utils/RenderObjectives.jsx'
@@ -37,10 +42,9 @@ const ActiveProject = () => {
           {prevProject && (
             <NavLink
               to={`/projects/${prevProject.id}`}
-              className="button NavButton"
               onClick={() => window.scrollTo(0, 0)}
             >
-              Précédent
+              <FaCircleChevronLeft className="link-icon" size={40} />
             </NavLink>
           )}
 
@@ -55,18 +59,16 @@ const ActiveProject = () => {
           {nextProject ? (
             <NavLink
               to={`/projects/${nextProject.id}`}
-              className="button NavButton"
               onClick={() => window.scrollTo(0, 0)}
             >
-              Suivant
+              <FaCircleChevronRight className="link-icon" size={40} />
             </NavLink>
           ) : (
             <NavLink
-              to="/projects/0"
-              className="button NavButton"
+              to="/"
               onClick={() => window.scrollTo(0, 0)}
             >
-              Suivant
+              <FaHome className="link-icon" size={40} />
             </NavLink>
           )}
         </div>

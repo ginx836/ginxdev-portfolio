@@ -1,4 +1,4 @@
-import { GithubOriginal, LinkedinPlain } from 'devicons-react'
+import { IoLogoGithub, IoLogoLinkedin, IoMail } from 'react-icons/io5'
 
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
@@ -20,7 +20,7 @@ const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <LinkedinPlain color="white" size={60} />
+            <IoLogoLinkedin className="link-icon" size={60} />
           </a>
           <a
             href="https://github.com/ginx836"
@@ -28,10 +28,10 @@ const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
             rel="noopener noreferrer"
             aria-label="Github"
           >
-            <GithubOriginal style={{ filter: 'invert(100%)' }} size={60} />
+            <IoLogoGithub className="link-icon" size={60} />
           </a>
-          <NavLink to="/contact" className="button">
-            Contact
+          <NavLink to="/contact">
+            <IoMail className="link-icon" size={60} />
           </NavLink>
         </div>
       </div>

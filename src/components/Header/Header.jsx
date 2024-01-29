@@ -1,5 +1,4 @@
-import { LinkedinPlain } from 'devicons-react'
-import GithubcodespacesPlain from 'devicons-react/lib/icons/GithubcodespacesPlain'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
@@ -27,7 +26,7 @@ const Header = () => {
       to: 'https://www.linkedin.com',
       name:
         windowWidth <= 1024 ? (
-          <LinkedinPlain color="white" size={30} />
+          <IoLogoLinkedin className='link-icon' size={30} />
         ) : (
           'LinkedIn'
         ),
@@ -38,7 +37,7 @@ const Header = () => {
       to: 'https://github.com/ginx836',
       name:
         windowWidth <= 1024 ? (
-          <GithubcodespacesPlain color="white" size={30} />
+          <IoLogoGithub className='link-icon' size={30} />
         ) : (
           'Github'
         ),

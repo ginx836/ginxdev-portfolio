@@ -17,8 +17,17 @@ body {
   margin-left: $margin-header;
 
 
-  @media screen and (max-width: 1024px) {
+
+  @media screen and (max-width: $breakpoint-large) {
     margin-left: 0;
-    margin-top: 5rem;
+    margin-top: $margin-header-mobile;
+  }
+}
+
+.link-icon {
+  color: $color-primary;
+
+  &:hover {
+    color: $color-tertiary;
   }
 }

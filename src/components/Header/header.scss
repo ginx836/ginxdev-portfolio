@@ -10,7 +10,6 @@
   padding-top: $margin-xlarge;
   padding-bottom: $margin-large;
   background-color: $color-secondary;
-  // border-right: 1px solid $color-tertiary;
 
   @include flex-column;
   justify-content: space-between;
@@ -21,8 +20,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 $margin-large;
-    // margin-top: $margin-medium;
+    padding: $margin-xlarge $margin-large;
   }
 
   @media screen and (max-width: $breakpoint-small) {
@@ -40,6 +38,10 @@
     @media screen and (max-width: $breakpoint-large) {
       height: $margin-header-mobile;
       font-size: $font-size-logo;
+    }
+    @media screen and (max-width: $breakpoint-medium) {
+      font-size: $font-size-xlarge;
+      
     }
 
     @media screen and (max-width: $breakpoint-small) {
@@ -73,18 +75,21 @@
       }
 
       @media screen and (max-width: $breakpoint-large) {
-        font-size: $font-size-default;
+        font-size: $font-size-large;
+      }
+      @media screen and (max-width: $breakpoint-medium) {
+        font-size: $font-size-medium;
       }
       @media screen and (max-width: $breakpoint-small) {
         font-size: $font-size-default;
+      }
+      @media screen and (max-width: $breakpoint-xsmall) {
+        font-size: $font-size-small;
       }
 
       &:hover {
         color: $color-tertiary;
       }
-    }
-    @media screen and (max-width: $breakpoint-xsmall) {
-      display: none;
     }
   }
 }

@@ -11,8 +11,8 @@ const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
       <div className="hero__description">
         <h1 className="hero__title">{title}</h1>
         <p className="hero__text">{text}</p>
-        <p className="hero__subtitle">{subtitle}</p>
-        <p className="hero__subtitle2">{subtitle2}</p>
+        <quote className="hero__subtitle">{subtitle}</quote>
+        <quote className="hero__subtitle2">{subtitle2}</quote>
         <div className="hero__social">
           <a
             href="https://www.linkedin.com/in/cedric-bourquin-092a8a250/"
@@ -31,7 +31,11 @@ const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
             <IoLogoGithub className="link-icon" size={60} />
           </a>
           <NavLink to="/contact">
-            <IoMail className="link-icon" size={60} />
+            <IoMail
+              className="link-icon"
+              size={60}
+              aria-label="lien vers la page Contact"
+            />
           </NavLink>
         </div>
       </div>

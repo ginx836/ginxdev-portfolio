@@ -1,7 +1,8 @@
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import { NavLink } from 'react-router-dom'
+import ThemeSwitchButton from '../utils/ThemeSwitcherButton'
 
 const NavLinkItem = ({ to, children }) => <NavLink to={to}>{children}</NavLink>
 
@@ -26,7 +27,7 @@ const Header = () => {
       to: 'https://www.linkedin.com',
       name:
         windowWidth <= 1024 ? (
-          <IoLogoLinkedin className='link-icon' size={30} />
+          <IoLogoLinkedin className="link-icon" size={30} />
         ) : (
           'LinkedIn'
         ),
@@ -37,7 +38,7 @@ const Header = () => {
       to: 'https://github.com/ginx836',
       name:
         windowWidth <= 1024 ? (
-          <IoLogoGithub className='link-icon' size={30} />
+          <IoLogoGithub className="link-icon" size={30} />
         ) : (
           'Github'
         ),
@@ -49,7 +50,10 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__wrapper">
-        <div className="header__logo">GD.</div>
+          <div className="header__logo">
+            GD.
+            <ThemeSwitchButton />
+          </div>
         <nav className="header__nav">
           {navLinks.map((link, index) =>
             link.isExternal ? (

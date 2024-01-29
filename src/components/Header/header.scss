@@ -9,7 +9,7 @@
   height: 100vh;
   padding-top: $margin-xlarge;
   padding-bottom: $margin-large;
-  background-color: $color-secondary;
+  background-color: var(--color-secondary);
 
   @include flex-column;
   justify-content: space-between;
@@ -30,10 +30,10 @@
 
   .header__logo {
     @include link;
-    @include flex-column-center-center;
+    @include flex-row-center-center;
 
     font-size: $font-size-logo;
-    color: $color-primary;
+    color: var(--color-primary);
 
     @media screen and (max-width: $breakpoint-large) {
       height: $margin-header-mobile;
@@ -41,7 +41,6 @@
     }
     @media screen and (max-width: $breakpoint-medium) {
       font-size: $font-size-xlarge;
-      
     }
 
     @media screen and (max-width: $breakpoint-small) {
@@ -66,12 +65,12 @@
 
     & a {
       @include link;
-      color: $color-primary;
+      color: var(--color-primary);
       font-size: $font-size-medium;
       text-transform: uppercase;
 
       &.active {
-        color: $color-tertiary;
+        color: var(--color-tertiary);
       }
 
       @media screen and (max-width: $breakpoint-large) {
@@ -88,8 +87,25 @@
       }
 
       &:hover {
-        color: $color-tertiary;
+        color: var(--color-tertiary);
       }
+    }
+  }
+}
+
+.theme-switcher {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    width: $margin-large;
+    height: $margin-large;
+    fill: var(--color-primary);
+
+    @media screen and (max-width: $breakpoint-xsmall) {
+      width: $margin-medium;
+      height: $margin-medium;
     }
   }
 }

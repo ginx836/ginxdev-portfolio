@@ -14,7 +14,5 @@
 .notfound-link {
   @include link;
   font-size: $font-size-large;
-  color: $color-tertiary;
-
+  color: var(--color-tertiary);
 }
-

@@ -8,15 +8,13 @@
 body {
   font-family: 'Cabin', sans-serif;
   font-size: $font-size-default;
-  color: $color-primary;
-  background-color: $color-secondary;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
   line-height: 1.1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   margin-left: $margin-header;
-
-
 
   @media screen and (max-width: $breakpoint-large) {
     margin-left: 0;
@@ -25,9 +23,9 @@ body {
 }
 
 .link-icon {
-  color: $color-primary;
-
+  color: var(--color-primary);
+ 
   &:hover {
-    color: $color-tertiary;
+    color: var(--color-tertiary);
   }
 }

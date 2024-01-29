@@ -1,8 +1,5 @@
-import {
-  FaCircleChevronLeft,
-  FaCircleChevronRight,
-} from 'react-icons/fa6'
 import { FaHome } from 'react-icons/fa'
+import { FaCircleChevronLeft, FaCircleChevronRight } from 'react-icons/fa6'
 import { NavLink, Navigate, useParams } from 'react-router-dom'
 import Button from '../components/utils/Button/Button'
 import RenderObjectives from '../components/utils/RenderObjectives.jsx'
@@ -31,8 +28,8 @@ const ActiveProject = () => {
       <RenderPictures project={project} />
 
       <div className="projects-body">
-        <h2 className="projects-header">{project.header}</h2>
-        <h3 className="projects-subtitle">{project.body_title}</h3>
+        <h1 className="projects-header">{project.header}</h1>
+        <h2 className="projects-subtitle">{project.body_title}</h2>
         <p className="projects-description">{project.description}</p>
 
         <RenderObjectives project={project} />
@@ -43,6 +40,7 @@ const ActiveProject = () => {
             <NavLink
               to={`/projects/${prevProject.id}`}
               onClick={() => window.scrollTo(0, 0)}
+              aria-label="bouton précédent"
             >
               <FaCircleChevronLeft className="link-icon" size={40} />
             </NavLink>
@@ -52,14 +50,22 @@ const ActiveProject = () => {
             className="LinkButton"
             buttonText="Github"
             href={project.link}
+            aria-label="bouton github"
           />
 
-          {project.link2 && <Button buttonText="site" href={project.link2} />}
+          {project.link2 && (
+            <Button
+              buttonText="site"
+              aria-label="lien vers le site"
+              href={project.link2}
+            />
+          )}
 
           {nextProject ? (
             <NavLink
               to={`/projects/${nextProject.id}`}
               onClick={() => window.scrollTo(0, 0)}
+              aria-label="bouton suivant"
             >
               <FaCircleChevronRight className="link-icon" size={40} />
             </NavLink>
@@ -67,6 +73,7 @@ const ActiveProject = () => {
             <NavLink
               to="/"
               onClick={() => window.scrollTo(0, 0)}
+              aria-label="bouton accueil"
             >
               <FaHome className="link-icon" size={40} />
             </NavLink>

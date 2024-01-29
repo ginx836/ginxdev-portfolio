@@ -87,7 +87,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: $margin-large;
-  color: $color-tertiary;
+  color: var(--color-tertiary);
 }
 
 .hero__social {

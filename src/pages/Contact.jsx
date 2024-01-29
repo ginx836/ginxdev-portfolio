@@ -37,14 +37,30 @@ const Contact = () => {
     <>
       <div className="contact">
         <form className="form" ref={form} onSubmit={sendEmail}>
-          <h2 className="form__title"> On reste en contact ?</h2>
+          <h1 className="form__title"> On reste en contact ?</h1>
           <div className="form__group">
-            <label className="form__label">Nom</label>
-            <input className="form__input" type="text" name="user_name" />
-            <label className="form__label">Email</label>
-            <input className="form__input" type="email" name="user_email" />
-            <label className="form__label">Message</label>
-            <textarea className="form__textarea" name="message" />
+            <label htmlFor="user_name" className="form__label">
+              Nom
+            </label>
+            <input
+              id="user_name"
+              className="form__input"
+              type="text"
+              name="user_name"
+            />
+            <label htmlFor="user_email" className="form__label">
+              Email
+            </label>
+            <input
+              id="user_email"
+              className="form__input"
+              type="email"
+              name="user_email"
+            />
+            <label htmlFor="message" className="form__label">
+              Message
+            </label>
+            <textarea id="message" className="form__textarea" name="message" />
           </div>
         </form>
         {isSubmitting && (

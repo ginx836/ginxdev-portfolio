@@ -16,7 +16,7 @@
   }
 
   &__subtext {
-    color: $color-tertiary;
+    color: var(--color-tertiary);
     font-weight: 700;
 
     @media screen and (max-width: $breakpoint-small) {

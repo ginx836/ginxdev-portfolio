@@ -1,9 +1,13 @@
 @import './mixins';
 
-/* Colors */
-$color-primary: #fff;
-$color-secondary: #000;
-$color-tertiary: #ebb523;
+
+:root {
+  /* Colors */
+  --color-primary: #fff;
+  --color-secondary: #000;
+  --color-tertiary: #ebb523;
+
+}
 
 /* Margin & Padding */
 $margin-xsmall: 0.5rem;
@@ -33,4 +37,5 @@ $breakpoint-small: 425px;
 $breakpoint-medium: 768px;
 $breakpoint-large: 1024px;
 $breakpoint-xlarge: 1440px;
+
 

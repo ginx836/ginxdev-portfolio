@@ -76,7 +76,6 @@
   }
 
   @media screen and (max-width: $breakpoint-medium) {
-    margin-top: 6em;
 
     &-header {
       font-size: 4em;
@@ -85,7 +84,6 @@
 
     &-description {
       margin-top: $margin-large;
-      font-size: $font-size-default;
       line-height: 1.5;
     }
 
@@ -232,7 +230,7 @@
   margin-top: $margin-large;
   margin-bottom: $margin-xlarge;
   width: auto;
-  color: $color-tertiary;
+  color: var(--color-tertiary);
 
   & ul {
     @include flex-row-center-center;
@@ -252,5 +250,5 @@
 }
 
 hr {
-  border: 1px solid $color-tertiary;
+  border: 1px solid var(--color-tertiary);
 }

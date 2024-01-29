@@ -8,7 +8,6 @@ import Hero from '../components/Hero/Hero'
 import Button from '../components/utils/Button/Button'
 import SectionDivider from '../components/utils/SectionDivider'
 import data from '../data/projects.json'
-
 import '../styles/pages/home.scss'
 
 const Home = () => {

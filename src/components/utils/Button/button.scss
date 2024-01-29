@@ -2,9 +2,9 @@
 
 .button {
   padding: 1.3em 1.3em;
-  background: $color-primary;
-  border: 1px solid $color-secondary;
-  color: $color-secondary;
+  background: var(--color-primary);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
   cursor: pointer;
   font: {
     size: 0.8rem;
@@ -14,6 +14,6 @@
   text-decoration: none;
 
   &:hover {
-    background-color: $color-tertiary;
+    background-color: var(--color-tertiary);
   }
 }

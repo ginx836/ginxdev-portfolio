@@ -9,7 +9,7 @@
     font-weight: $font-weight-bold;
     font-size: $font-size-medium;
     margin-bottom: $margin-large;
-    color: $color-tertiary;
+    color: var(--color-tertiary);
   }
 }
 
@@ -47,7 +47,7 @@
       font-weight: $font-weight-bold;
       font-variant: small-caps;
       margin-bottom: $margin-medium;
-      border-bottom: 1px solid $color-tertiary;
+      border-bottom: 1px solid var(--color-tertiary);
     }
 
     .form__input {

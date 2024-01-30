@@ -3,11 +3,15 @@
 #main-slider-container {
   width: auto;
   height: auto;
-  margin-bottom: $margin-xlarge;
+  margin-bottom: $margin-xxlarge;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: $breakpoint-425px) {
+    margin-bottom: $margin-xlarge;
+  }
 }
 
 #slider {
@@ -24,15 +28,15 @@
     display: none; // Chrome, Safari, Edge
   }
 
-  @media screen and (max-width: $breakpoint-xlarge) {
+  @media screen and (max-width: $breakpoint-1440px) {
     width: 840px;
   }
 
-  @media screen and (max-width: $breakpoint-large) {
+  @media screen and (max-width: $breakpoint-1024px) {
     width: 420px;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: $breakpoint-425px) {
     width: 300px;
     margin-left: 0;
     margin-right: 0;
@@ -54,12 +58,12 @@
 .slider-card {
   width: 400px;
   height: auto;
-  background: var(--color-primary);
+  background: var(--color-gray-light);
   display: inline-block;
   margin: 0 10px;
   padding: 10px;
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: $breakpoint-425px) {
     width: 280px;
   }
 }
@@ -68,7 +72,6 @@
   width: 100%;
   object-fit: cover;
   background: var(--color-tertiary);
-  border: 1px solid lightgray;
 }
 
 .slider-content {
@@ -81,19 +84,23 @@
     width: 100%;
     padding: 15px;
     background: var(--color-tertiary);
-    color: var(--color-secondary);
-    font-size: $font-size-large;
+    color: #000;
+    font-size: $fs-lg;
     font-weight: $font-weight-bold;
     text-align: center;
     margin-top: $margin-large;
+
+    @media screen and (max-width: $breakpoint-425px) {
+      font-size: $fs-md;
+    }
   }
 
   &-info {
     width: auto;
     height: 100px;
-    background: var(--color-primary);
-    color: var(--color-secondary);
-    font-size: $font-size-medium;
+    background: var(--color-gray-light);
+    color: #000;
+    font-size: $fs-sm;
     text-align: center;
     margin-top: $margin-large;
     white-space: normal;

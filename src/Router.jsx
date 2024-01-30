@@ -1,9 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
 import Home from './pages/Home'
-import ActiveProject from './pages/ProjectsDetails'
-import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
+import ActiveProject from './pages/ProjectsDetails'
 
 const router = createBrowserRouter([
   {
@@ -17,10 +16,6 @@ const router = createBrowserRouter([
       {
         path: '/projects/:id',
         element: <ActiveProject />,
-      },
-      {
-        path: '/contact',
-        element: <Contact />,
       },
       {
         path: '/404',

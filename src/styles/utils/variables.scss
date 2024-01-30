@@ -1,12 +1,11 @@
 @import './mixins';
 
-
 :root {
   /* Colors */
   --color-primary: #fff;
   --color-secondary: #000;
   --color-tertiary: #ebb523;
-
+  --color-gray-light: #f5f5f5;
 }
 
 /* Margin & Padding */
@@ -17,25 +16,31 @@ $margin-large: 2rem;
 $margin-xlarge: 5rem;
 $margin-xxlarge: 10rem;
 
-$margin-header: 15rem;
+$margin-header: 9rem;
 $margin-header-mobile: 6rem;
 
 /* Fonts */
-$font-size-small: 0.8rem;
-$font-size-default: 1rem;
-$font-size-medium: 1.2rem;
-$font-size-large: 1.5rem;
-$font-size-xlarge: 3rem;
-$font-size-logo: 5rem;
-$font-size-logo-mobile: 2rem;
-$font-size-main-title: 9rem;
+$fs-default: 1rem;
+
+$fs-xs: 0.8rem;
+$fs-sm: 1.2rem;
+$fs-md: 1.5rem;
+$fs-lg: 2rem;
+$fs-xl: 2.5rem;
+$fs-xxl: 3rem;
+
+$fs-logo-mobile: 3rem;
+$fs-logo: 5rem;
+$fs-logo-large: 7rem;
+
+$fs-main-title: 9rem;
+$fs-section-title: 4.5rem;
+
 $font-weight-bold: 700;
 
 /* Breakpoints */
-$breakpoint-xsmall: 375px;
-$breakpoint-small: 425px;
-$breakpoint-medium: 768px;
-$breakpoint-large: 1024px;
-$breakpoint-xlarge: 1440px;
-
-
+$breakpoint-375px: 375px;
+$breakpoint-425px: 425px;
+$breakpoint-768px: 768px;
+$breakpoint-1024px: 1024px;
+$breakpoint-1440px: 1440px;

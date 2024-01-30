@@ -20,11 +20,12 @@ const ActiveProject = () => {
   const nextProject =
     projectIndex < data.length - 1 ? data[projectIndex + 1] : null
 
-  if (!project) {
-    return <Navigate to="/404" />
-  }
-  return (
-    <section key={project.id} className="projects">
+    if (!project) {
+      return <Navigate to="/404" />
+    }
+    return (
+      <>
+      <section key={project.id} className="projects">
       <RenderPictures project={project} />
 
       <div className="projects-body">
@@ -34,53 +35,54 @@ const ActiveProject = () => {
 
         <RenderObjectives project={project} />
         <RenderTechnologies technologies={project.technologies} size={50} />
-
-        <div className="projects-link">
-          {prevProject && (
-            <NavLink
-              to={`/projects/${prevProject.id}`}
-              onClick={() => window.scrollTo(0, 0)}
-              aria-label="bouton précédent"
-            >
-              <FaCircleChevronLeft className="link-icon" size={40} />
-            </NavLink>
-          )}
-
-          <Button
-            className="LinkButton"
-            buttonText="Github"
-            href={project.link}
-            aria-label="bouton github"
-          />
-
-          {project.link2 && (
-            <Button
-              buttonText="site"
-              aria-label="lien vers le site"
-              href={project.link2}
-            />
-          )}
-
-          {nextProject ? (
-            <NavLink
-              to={`/projects/${nextProject.id}`}
-              onClick={() => window.scrollTo(0, 0)}
-              aria-label="bouton suivant"
-            >
-              <FaCircleChevronRight className="link-icon" size={40} />
-            </NavLink>
-          ) : (
-            <NavLink
-              to="/"
-              onClick={() => window.scrollTo(0, 0)}
-              aria-label="bouton accueil"
-            >
-              <FaHome className="link-icon" size={40} />
-            </NavLink>
-          )}
-        </div>
       </div>
-    </section>
+      </section>
+
+      <div className="projects-link">
+        {prevProject && (
+          <NavLink
+            to={`/projects/${prevProject.id}`}
+            onClick={() => window.scrollTo(0, 0)}
+            aria-label="bouton précédent"
+          >
+            <FaCircleChevronLeft className="link-icon" size={40} />
+          </NavLink>
+        )}
+
+        <Button
+          className="LinkButton"
+          buttonText="Github"
+          href={project.link}
+          aria-label="bouton github"
+        />
+
+        {project.link2 && (
+          <Button
+            buttonText="site"
+            aria-label="lien vers le site"
+            href={project.link2}
+          />
+        )}
+
+        {nextProject ? (
+          <NavLink
+            to={`/projects/${nextProject.id}`}
+            onClick={() => window.scrollTo(0, 0)}
+            aria-label="bouton suivant"
+          >
+            <FaCircleChevronRight className="link-icon" size={40} />
+          </NavLink>
+        ) : (
+          <NavLink
+            to="/"
+            onClick={() => window.scrollTo(0, 0)}
+            aria-label="bouton accueil"
+          >
+            <FaHome className="link-icon" size={40} />
+          </NavLink>
+        )}
+      </div>
+      </>
   )
 }
 

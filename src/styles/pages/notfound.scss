@@ -7,12 +7,12 @@
 
 .notfound-title {
   @include title;
-  font-size: $font-size-xlarge;
+  font-size: $fs-xxl;
   text-align: center;
 }
 
 .notfound-link {
   @include link;
-  font-size: $font-size-large;
+  font-size: $fs-lg;
   color: var(--color-tertiary);
 }

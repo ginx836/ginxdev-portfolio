@@ -3,6 +3,7 @@ import HeroPicture from '../assets/Hero/hero-picture.svg'
 import ProfilPicture from '../assets/profil-picture.webp'
 import About from '../components/About/About'
 import CardSlider from '../components/CardSlider/CardSlider'
+import Contact from '../components/Contact/Contact'
 import Footer from '../components/Footer/Footer'
 import Hero from '../components/Hero/Hero'
 import Button from '../components/utils/Button/Button'
@@ -33,7 +34,7 @@ const Home = () => {
           <Button buttonText="Voir tous les projets" />
         </NavLink>
       </div>
-      <SectionDivider id="aboutme" title="A propos de moi" />
+      <SectionDivider title="A propos de moi" />
       <About
         title="A propos de moi"
         text={
@@ -54,7 +55,8 @@ const Home = () => {
         img={ProfilPicture}
         img_alt="Cédric Bourquin"
       />
-      <Footer />
+      <SectionDivider id="contact" title="Contact" />
+      <Contact />
     </>
   )
 }

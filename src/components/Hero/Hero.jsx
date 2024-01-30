@@ -1,7 +1,4 @@
-import { IoLogoGithub, IoLogoLinkedin, IoMail } from 'react-icons/io5'
-
 import PropTypes from 'prop-types'
-import { NavLink } from 'react-router-dom'
 import './hero.scss'
 
 const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
@@ -13,31 +10,6 @@ const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
         <p className="hero__text">{text}</p>
         <quote className="hero__subtitle">{subtitle}</quote>
         <quote className="hero__subtitle2">{subtitle2}</quote>
-        <div className="hero__social">
-          <a
-            href="https://www.linkedin.com/in/cedric-bourquin-092a8a250/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <IoLogoLinkedin className="link-icon" size={60} />
-          </a>
-          <a
-            href="https://github.com/ginx836"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Github"
-          >
-            <IoLogoGithub className="link-icon" size={60} />
-          </a>
-          <NavLink to="/contact">
-            <IoMail
-              className="link-icon"
-              size={60}
-              aria-label="lien vers la page Contact"
-            />
-          </NavLink>
-        </div>
       </div>
     </section>
   )

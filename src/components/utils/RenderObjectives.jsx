@@ -6,8 +6,7 @@ const renderObjectives = ({project}) => {
   return (
     <div className="objectives-container">
       <h2 className="projects-subtitle">Objectifs</h2>
-      <hr />
-      <ul>
+      <ul className='objectives-list'>
         {project.objectifs.map((objectif, index) => (
           <li key={index}>{objectif}</li>
         ))}

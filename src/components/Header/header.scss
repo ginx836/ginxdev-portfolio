@@ -1,109 +1,84 @@
 @import '../../styles/utils/variables.scss';
 
-.header__wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: $margin-header;
-  height: 100vh;
-  padding-top: $margin-xlarge;
-  padding-bottom: $margin-large;
-  background-color: var(--color-secondary);
-
-  @include flex-column;
+.header {
+  @include flex-row-center-center;
   justify-content: space-between;
+  width: 100%;
+  padding: $margin-xlarge $margin-xlarge;
 
-  @media screen and (max-width: $breakpoint-large) {
-    width: 100%;
-    height: $margin-header-mobile;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: $margin-xlarge $margin-large;
+  @media screen and (max-width: $breakpoint-1024px) {
+    padding: $margin-large $margin-large;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
-    padding: 0 $margin-medium;
-    margin-top: 0;
+  @media screen and (max-width: $breakpoint-425px) {
+    padding: $margin-small $margin-small;
   }
 
   .header__logo {
-    @include link;
-    @include flex-row-center-center;
-
-    font-size: $font-size-logo;
+    font-size: $fs-logo-large;
     color: var(--color-primary);
 
-    @media screen and (max-width: $breakpoint-large) {
-      height: $margin-header-mobile;
-      font-size: $font-size-logo;
+    @media screen and (max-width: $breakpoint-1440px) {
+      font-size: $fs-logo;
     }
-    @media screen and (max-width: $breakpoint-medium) {
-      font-size: $font-size-xlarge;
+ 
+    @media screen and (max-width: $breakpoint-425px) {
+      font-size: $fs-logo-mobile;
     }
+  }
 
-    @media screen and (max-width: $breakpoint-small) {
-      font-size: $font-size-logo-mobile;
-    }
+  .nav-wrapper {
+    @include flex-row-center-center;
   }
 
   .header__nav {
     @include flex-column;
     padding-left: $margin-large;
 
-    @media screen and (max-width: $breakpoint-large) {
-      @include flex-row;
-      align-items: center;
-      padding: 0;
-      gap: $margin-large;
+    @media screen and (max-width: $breakpoint-1024px) {
+      @include flex-row-center-center;
+      gap: 15px;
     }
 
-    @media screen and (max-width: $breakpoint-small) {
-      gap: $margin-medium;
+    @media screen and (max-width: $breakpoint-425px) {
+      gap: 10px;
     }
 
     & a {
       @include link;
+      font-size: $fs-xl;
+      font-variant: small-caps;
       color: var(--color-primary);
-      font-size: $font-size-medium;
-      text-transform: uppercase;
 
       &.active {
         color: var(--color-tertiary);
       }
 
-      @media screen and (max-width: $breakpoint-large) {
-        font-size: $font-size-large;
-      }
-      @media screen and (max-width: $breakpoint-medium) {
-        font-size: $font-size-medium;
-      }
-      @media screen and (max-width: $breakpoint-small) {
-        font-size: $font-size-default;
-      }
-      @media screen and (max-width: $breakpoint-xsmall) {
-        font-size: $font-size-small;
-      }
-
       &:hover {
         color: var(--color-tertiary);
       }
+
+      @media screen and (max-width: $breakpoint-1024px) {
+        display: flex;
+        font-size: $fs-md;
+      }
     }
+
   }
 }
 
 .theme-switcher {
+  display: flex;
   background: none;
   border: none;
   cursor: pointer;
 
   svg {
-    width: $margin-large;
-    height: $margin-large;
+    width: $fs-xl;
+    height: $fs-xl;
     fill: var(--color-primary);
 
-    @media screen and (max-width: $breakpoint-xsmall) {
+    @media screen and (max-width: $breakpoint-425px) {
       width: $margin-medium;
       height: $margin-medium;
     }

@@ -8,10 +8,10 @@
 
   &__text {
     @include flex-column-center-center;
-    color: white;
+    color: var(--color-primary);
 
-    @media screen and (max-width: $breakpoint-small) {
-      font-size: $font-size-small;
+    @media screen and (max-width: $breakpoint-425px) {
+      font-size: $fs-xs;
     }
   }
 
@@ -19,8 +19,8 @@
     color: var(--color-tertiary);
     font-weight: 700;
 
-    @media screen and (max-width: $breakpoint-small) {
-      font-size: $font-size-small;
+    @media screen and (max-width: $breakpoint-425px) {
+      font-size: $fs-xs;
     }
   }
 }

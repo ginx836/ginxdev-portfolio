@@ -1,0 +1,27 @@
+@import '../utils/variables.scss';
+
+.section-divider {
+  @include flex-row-center-center;
+  margin-bottom: $margin-xxlarge;
+
+  @media screen and (max-width: $breakpoint-1024px) {
+    margin-bottom: $margin-xlarge;
+  }
+
+  @media screen and (max-width: $breakpoint-425px) {
+    margin-bottom: $margin-large;
+  }
+}
+
+.section-title {
+  font-size: $fs-section-title;
+  font-weight: $font-weight-bold;
+
+  @media screen and (max-width: $breakpoint-1024px) {
+    font-size: $fs-xxl;
+  }
+
+  @media screen and (max-width: $breakpoint-425px) {
+    font-size: $fs-xl;
+  }
+}

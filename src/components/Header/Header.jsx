@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { useEffect, useState } from 'react'
-import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
+import { IoHomeOutline, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import { NavLink } from 'react-router-dom'
 import ThemeSwitchButton from '../utils/ThemeSwitcherButton'
 
@@ -21,39 +21,34 @@ const Header = () => {
   }, [])
 
   const navLinks = [
-    { to: '/', name: 'Accueil', isExternal: false },
-    { to: '/contact', name: 'Contact', isExternal: false },
+    {
+      to: '/',
+      icon: <IoHomeOutline className="link-icon" size={30} />,
+      name: 'accueil',
+      textName: 'accueil',
+      isExternal: false,
+    },
     {
       to: 'https://www.linkedin.com',
-      name:
-        windowWidth <= 1024 ? (
-          <IoLogoLinkedin className="link-icon" size={30} />
-        ) : (
-          'LinkedIn'
-        ),
-      textName: 'LinkedIn',
+      icon: <IoLogoLinkedin className="link-icon" size={30} />,
+      name: 'linkedIn',
+      textName: 'linkedIn',
       isExternal: true,
     },
     {
       to: 'https://github.com/ginx836',
-      name:
-        windowWidth <= 1024 ? (
-          <IoLogoGithub className="link-icon" size={30} />
-        ) : (
-          'Github'
-        ),
-      textName: 'Github',
+      icon: <IoLogoGithub className="link-icon" size={30} />,
+      name: 'github',
+      textName: 'github',
       isExternal: true,
     },
   ]
 
   return (
     <header className="header">
-      <div className="header__wrapper">
-          <div className="header__logo">
-            GD.
-            <ThemeSwitchButton />
-          </div>
+      <div className="header__logo">GD.</div>
+      <div className="nav-wrapper">
+        <ThemeSwitchButton />
         <nav className="header__nav">
           {navLinks.map((link, index) =>
             link.isExternal ? (
@@ -64,11 +59,11 @@ const Header = () => {
                 rel="noopener noreferrer"
                 aria-label={link.textName}
               >
-                {link.name}
+                {windowWidth <= 1024 ? link.icon : link.name}
               </a>
             ) : (
               <NavLinkItem key={index} to={link.to}>
-                {link.name}
+                {windowWidth <= 1024 ? link.icon : link.name}
               </NavLinkItem>
             ),
           )}

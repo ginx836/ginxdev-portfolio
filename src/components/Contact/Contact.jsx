@@ -1,8 +1,8 @@
 import emailjs from '@emailjs/browser'
 import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import Button from '../components/utils/Button/Button'
-import '../styles/pages/contacts.scss'
+import Button from '../utils/Button/Button'
+import './contacts.scss'
 
 const Contact = () => {
   const form = useRef()
@@ -36,8 +36,17 @@ const Contact = () => {
   return (
     <>
       <div className="contact">
+        <div className="contact__info">
+          <div className="contact-item">
+            <h3 className="contact-item__title">Téléphone</h3>
+            <p className="contact-item__text">(+33) 06 61 21 72 42</p>
+          </div>
+          <div className="contact-item">
+            <h3 className="contact-item__title">Email</h3>
+            <p className="contact-item__text">cedric.bourquin1@icloud.com</p>
+          </div>
+        </div>
         <form className="form" ref={form} onSubmit={sendEmail}>
-          <h1 className="form__title"> On reste en contact ?</h1>
           <div className="form__group">
             <label htmlFor="user_name" className="form__label">
               Nom
@@ -62,13 +71,16 @@ const Contact = () => {
             </label>
             <textarea id="message" className="form__textarea" name="message" />
           </div>
+          <div className="submit-group">
+            <p
+              className="sendingText"
+              style={{ opacity: isSubmitting ? 1 : 0 }}
+            >
+              Envoi en cours, veuillez patienter...
+            </p>
+            <Button onClick={sendEmail} buttonText="Envoyer" type="submit" />
+          </div>
         </form>
-        {isSubmitting && (
-          <p className="sendEmailMessage">
-            Envoi en cours, veuillez patienter...
-          </p>
-        )}
-        <Button onClick={sendEmail} buttonText="Envoyer" type="submit" />
       </div>
     </>
   )

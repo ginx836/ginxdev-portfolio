@@ -1,18 +1,24 @@
 @import '../../styles/utils/variables.scss';
 
 .hero {
-  @include flex-row-center-center;
-  padding: $margin-xlarge;
-  margin: $margin-xlarge 0;
-  flex: 1;
+  @include flex-row;
+  justify-content: space-around;
+  align-items: center;
+  margin: $margin-header 0;
 
-  @media screen and (max-width: $breakpoint-xlarge) {
+  @media screen and (max-width: $breakpoint-1440px) {
+    margin: $margin-xlarge 0;
     padding: $margin-large;
   }
 
-  @media screen and (max-width: $breakpoint-large) {
+  @media screen and (max-width: $breakpoint-1024px) {
     @include flex-column;
-    margin-top: $margin-header-mobile;
+    margin: $margin-medium 0;
+    padding: 0;
+  }
+
+  @media screen and (max-width: $breakpoint-425px) {
+    margin: $margin-small 0;
   }
 }
 
@@ -20,78 +26,62 @@
   @include flex-column;
   width: 50%;
 
-  @media screen and (max-width: $breakpoint-large) {
+  @media screen and (max-width: $breakpoint-1024px) {
     width: 100%;
+    padding: $margin-large;
   }
 }
 
 .hero__picture {
   width: 40em;
-  object-fit: center;
-  margin-right: $margin-xlarge;
 
-  @media screen and (max-width: $breakpoint-xlarge) {
+  @media screen and (max-width: $breakpoint-1440px) {
     width: 50%;
-  }
-
-  @media screen and (max-width: $breakpoint-large) {
-    width: 50%;
-    margin: $margin-small;
-  }
-
-  @media screen and (max-width: $breakpoint-medium) {
-    width: 50%;
-    margin-right: 0;
-    margin-bottom: $margin-small;
   }
 }
 
 .hero__title {
-  font-size: $font-size-main-title;
+  font-size: $fs-main-title;
   font-weight: 700;
   text-align: center;
 
-  @media screen and (max-width: $breakpoint-xlarge) {
-    font-size: $font-size-logo;
+  @media screen and (max-width: $breakpoint-1440px) {
+    font-size: $fs-logo-large;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
-    font-size: $font-size-xlarge;
+  @media screen and (max-width: $breakpoint-768px) {
+    font-size: $fs-logo;
+  }
+
+  @media screen and (max-width: $breakpoint-425px) {
+    font-size: $fs-xxl;
   }
 }
 
 .hero__text {
   text-align: center;
   line-height: 1.5;
-  font-size: $font-size-large;
+  font-size: $fs-lg;
   margin-bottom: $margin-large;
 
-  @media screen and (max-width: $breakpoint-xlarge) {
-    font-size: $font-size-medium;
+  @media screen and (max-width: $breakpoint-1440px) {
+    font-size: $fs-sm;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
-    font-size: $font-size-default;
+  @media screen and (max-width: $breakpoint-425px) {
+    font-size: $fs-default;
   }
 }
 
-.hero__subtitle {
-  font-size: $font-size-large;
+.hero__subtitle,
+.hero__subtitle2 {
+  font-size: $fs-lg;
   font-weight: 700;
   text-align: center;
   margin-bottom: $margin-medium;
 }
 
 .hero__subtitle2 {
-  font-size: $font-size-large;
-  font-weight: 700;
-  text-align: center;
   margin-bottom: $margin-large;
   color: var(--color-tertiary);
-}
-
-.hero__social {
-  @include flex-row-center-center;
-  margin-bottom: $margin-large;
-  gap: $margin-large;
 }

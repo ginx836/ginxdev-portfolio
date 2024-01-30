@@ -5,22 +5,26 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: $margin-xxlarge;
+
+  @media screen and (max-width: $breakpoint-425px) {
+    margin-bottom: $margin-xlarge;
+  }
 }
 
 .about__content {
   @include flex-row-center-center;
   width: 70%;
 
-  @media screen and (max-width: $breakpoint-xlarge),
-         screen and (max-width: $breakpoint-medium) {
+  @media screen and (max-width: $breakpoint-1440px),
+    screen and (max-width: $breakpoint-768px) {
     width: 90%;
   }
 
-  @media screen and (max-width: $breakpoint-large) {
+  @media screen and (max-width: $breakpoint-1024px) {
     flex-direction: column;
   }
 
-  @media screen and (max-width: $breakpoint-medium) {
+  @media screen and (max-width: $breakpoint-768px) {
     flex-direction: column;
   }
 }
@@ -29,27 +33,29 @@
   width: 70%;
   padding: $margin-xlarge;
   line-height: 1.5;
-  font-size: $font-size-medium;
 
-  @media screen and (max-width: $breakpoint-xlarge) {
+  @media screen and (max-width: $breakpoint-1440px) {
     padding: $margin-large;
-
   }
-  
-  @media screen and (max-width: $breakpoint-large),
-         screen and (max-width: $breakpoint-medium) {
+
+  @media screen and (max-width: $breakpoint-1024px),
+    screen and (max-width: $breakpoint-768px) {
     width: 90%;
-    font-size: $font-size-default;
-    
+    padding: 0 $margin-medium;
   }
 
-  @media screen and (max-width: $breakpoint-small) {
+  @media screen and (max-width: $breakpoint-425px) {
     width: 100%;
-    padding: $margin-large $margin-small;
+    padding: 0 $margin-small;
   }
 }
 
 .about__img {
   width: 30%;
   object-fit: cover;
+
+  @media screen and (max-width: $breakpoint-1024px) {
+    margin-top: $margin-medium;
+    
+  }
 }

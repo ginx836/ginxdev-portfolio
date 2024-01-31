@@ -14,6 +14,7 @@
 }
 
 .section-title {
+  font-family: "Lexend Exa", sans-serif;
   font-size: $fs-section-title;
   font-weight: $font-weight-bold;
 
@@ -22,6 +23,7 @@
   }
 
   @media screen and (max-width: $breakpoint-425px) {
-    font-size: $fs-xl;
+    font-size: $fs-lg;
+    text-align: center;
   }
 }

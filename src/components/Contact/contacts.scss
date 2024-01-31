@@ -31,7 +31,11 @@
 
     @media screen and (max-width: $breakpoint-768px) {
       align-items: center;
-      width: 90%;
+    }
+
+    @media screen and (max-width: $breakpoint-425px) {
+      padding: $margin-small;
+      
     }
 
     .contact-item {

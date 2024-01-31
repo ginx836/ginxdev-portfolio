@@ -5,6 +5,7 @@
   justify-content: center;
   gap: 2rem;
   margin-bottom: $margin-xxlarge;
+  padding: 0 $margin-large;
 
   @media screen and (max-width: $breakpoint-768px) {
     flex-direction: column;
@@ -18,33 +19,77 @@
     width: 100%;
     max-width: 600px;
     padding: $margin-large;
-    border: 1px solid var(--color-gray-light);
-    border-radius: 0.25rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--color-tertiary);
+    border-radius: 25px;
+    background-color: var(--color-tertiary);
+    color: #eeee;
 
     @media screen and (max-width: $breakpoint-1024px) {
       padding: $margin-medium;
       width: auto;
     }
 
+    @media screen and (max-width: $breakpoint-768px) {
+      align-items: center;
+      width: 90%;
+    }
+
     .contact-item {
       margin-bottom: $margin-medium;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media screen and (max-width: $breakpoint-768px) {
+        margin-bottom: $margin-small;
+        @include flex-column-center-center;
+      }
     }
 
     .contact-item__title {
       font-size: $fs-lg;
       font-weight: $font-weight-bold;
+      margin-bottom: $margin-small;
+
+      @media screen and (max-width: $breakpoint-1024px) {
+        font-size: $fs-md;
+        text-align: center;
+      }
+
+      @media screen and (max-width: $breakpoint-425px) {
+        font-size: $fs-sm;
+        
+      }
+    }
+
+    .contact-item__mail,
+    .contact-item__phone {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: $fs-lg;
 
       @media screen and (max-width: $breakpoint-1024px) {
         font-size: $fs-md;
       }
-    }
-    .contact-item__text {
-      font-size: $fs-md;
-      margin-bottom: $margin-medium;
 
-      @media screen and (max-width: $breakpoint-1024px) {
+      @media screen and (max-width: $breakpoint-768px) {
+        gap: 5px;
+      }
+
+      @media screen and (max-width: $breakpoint-425px) {
         font-size: $fs-sm;
+      }
+
+      .contact-item__link {
+        color: #eeee;
+        font-size: $fs-md;
+        text-decoration: none;
+
+        @media screen and (max-width: $breakpoint-1024px) {
+          font-size: $fs-sm;
+        }
       }
     }
   }
@@ -86,6 +131,7 @@
     padding: 0 0.75rem;
     height: 30px;
     width: 95%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.035);
 
     &:focus {
       border: 3px solid var(--color-tertiary);
@@ -132,5 +178,4 @@
       background-color: var(--color-tertiary);
     }
   }
-
 }

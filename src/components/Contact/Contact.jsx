@@ -1,5 +1,7 @@
 import emailjs from '@emailjs/browser'
 import { useRef, useState } from 'react'
+import { FaPhoneSquare } from 'react-icons/fa'
+import { IoMailSharp } from 'react-icons/io5'
 import { useNavigate } from 'react-router-dom'
 import Button from '../utils/Button/Button'
 import './contacts.scss'
@@ -9,16 +11,17 @@ const Contact = () => {
   const navigate = useNavigate()
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+  // Function to send the email with EmailJS.
   const sendEmail = (e) => {
     e.preventDefault()
     setIsSubmitting(true)
 
     emailjs
       .sendForm(
-        'service_icloud',
-        'template_n1a27lm',
+        'service_icloud', // service ID
+        'template_n1a27lm', // template ID
         form.current,
-        import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY,
+        import.meta.env.VITE_EMAIL_JS_PUBLIC_KEY, // public KEY
       )
       .then(
         (result) => {
@@ -38,12 +41,28 @@ const Contact = () => {
       <div className="contact">
         <div className="contact__info">
           <div className="contact-item">
-            <h3 className="contact-item__title">Téléphone</h3>
-            <p className="contact-item__text">(+33) 06 61 21 72 42</p>
+            <h3 className="contact-item__title">
+              <p className="contact-item__phone">
+                <FaPhoneSquare />
+                (+33) 06 61 21 72 42
+              </p>
+            </h3>
           </div>
           <div className="contact-item">
-            <h3 className="contact-item__title">Email</h3>
-            <p className="contact-item__text">cedric.bourquin1@icloud.com</p>
+            <h3 className="contact-item__title">
+              Vous préférez me contacter directement ?{' '}
+            </h3>
+            <p className="contact-item__mail">
+              <IoMailSharp />
+              <a
+                href="mailto:cedric.bourquin1@icloud.com"
+                className="contact-item__link"
+              >
+                cedric.bourquin1@icloud.com
+              </a>
+            </p>
+
+            <p className="contact-item__text"></p>
           </div>
         </div>
         <form className="form" ref={form} onSubmit={sendEmail}>
@@ -74,7 +93,7 @@ const Contact = () => {
           <div className="submit-group">
             <p
               className="sendingText"
-              style={{ opacity: isSubmitting ? 1 : 0 }}
+              style={{ opacity: isSubmitting ? 1 : 0 }} // If isSubmitting is true, opacity is 1, else opacity is 0.
             >
               Envoi en cours, veuillez patienter...
             </p>

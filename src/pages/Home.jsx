@@ -4,7 +4,6 @@ import ProfilPicture from '../assets/profil-picture.webp'
 import About from '../components/About/About'
 import CardSlider from '../components/CardSlider/CardSlider'
 import Contact from '../components/Contact/Contact'
-import Footer from '../components/Footer/Footer'
 import Hero from '../components/Hero/Hero'
 import Button from '../components/utils/Button/Button'
 import SectionDivider from '../components/utils/SectionDivider'
@@ -39,17 +38,23 @@ const Home = () => {
         title="A propos de moi"
         text={
           <>
-            Né au début de l&apos;ère des premiers ordinateurs personnels,
-            j&apos;ai grandi avec la technologie et cette passion ne m&apos;a
-            jamais quitté.
-            <br /> &quot;Tech Enthusiast&quot; depuis toujours, j&apos;ai décidé
-            de me lancer dans le développement web en 2023 après 21 ans de
-            commerce au service de mes clients.
+            &quot;Tech Enthusiast&quot;, né au début des années 80, j&apos;ai
+            grandi avec l&apos;informatique et le numérique.
+            <br />
+            Parce qu&apos;il n&apos;est jamais trop tard pour apprendre et se
+            lancer j&apos;ai décidé de faire de ma passion mon métier après 21
+            ans de commerce au service de mes clients.
             <br /> Grâce à OpenClassrooms j&apos;ai pu mettre mon 1er pied à
             l&apos;étrier.
             <br />
-            <br /> Mon objectif : Continuer à apprendre et de mettre mes
+            <br /> Mon objectif : Continuer à apprendre et mettre mes
             compétences au service de vos projets.
+          </>
+        }
+        quote={
+          <>
+            &quot;La seule façon de faire du bon travail est d&apos;aimer ce
+            que vous faites&quot; - Steve Jobs
           </>
         }
         img={ProfilPicture}

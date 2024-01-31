@@ -1,12 +1,14 @@
+// Render the objectives of the project.
+
 import PropTypes from 'prop-types'
 
-const renderObjectives = ({project}) => {
+const renderObjectives = ({ project }) => {
   if (!project.objectifs || project.objectifs.length === 0) return null
 
   return (
     <div className="objectives-container">
       <h2 className="projects-subtitle">Objectifs</h2>
-      <ul className='objectives-list'>
+      <ul className="objectives-list">
         {project.objectifs.map((objectif, index) => (
           <li key={index}>{objectif}</li>
         ))}

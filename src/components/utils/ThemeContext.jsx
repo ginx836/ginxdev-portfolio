@@ -1,25 +1,27 @@
 import PropTypes from 'prop-types'
-import { createContext, useState, useEffect, useCallback } from 'react'
+import { createContext, useCallback, useEffect, useState } from 'react'
 
-// Création du contexte du thème
+// Creating a new context for theme
 export const ThemeContext = createContext()
 
-// Création du fournisseur de thème
-export const ThemeProvider = ({ children }) => {
-  // Création de l'état pour le mode sombre
+// Helper function to get the computed style value and trim it
+const getComputedStyleTrim = (property) =>
+  getComputedStyle(document.documentElement).getPropertyValue(property).trim()
+
+// Creating a ThemeProvider component
+const ThemeProvider = ({ children }) => {
+  // State to hold whether dark mode is enabled
   const [isDark, setIsDark] = useState(false)
 
-  // Création d'une fonction pour mettre à jour le thème
+  // Function to update the theme
   const updateTheme = useCallback(() => {
-    // Récupération des couleurs primaires et secondaires actuelles
-    const colorPrimary = getComputedStyle(document.documentElement)
-      .getPropertyValue('--color-primary')
-      .trim()
-    const colorSecondary = getComputedStyle(document.documentElement)
-      .getPropertyValue('--color-secondary')
-      .trim()
+    // Getting the primary, secondary, tertiary, and tertiary-dark colors
+    const colorPrimary = getComputedStyleTrim('--color-primary')
+    const colorSecondary = getComputedStyleTrim('--color-secondary')
+    const colorTertiary = getComputedStyleTrim('--color-tertiary')
+    const colorTertiaryDark = getComputedStyleTrim('--color-tertiary-dark')
 
-    // Mise à jour des couleurs primaires et secondaires en fonction du mode sombre
+    // Setting the primary and secondary colors based on whether dark mode is enabled
     document.documentElement.style.setProperty(
       '--color-primary',
       isDark ? colorSecondary : colorPrimary,
@@ -28,22 +30,27 @@ export const ThemeProvider = ({ children }) => {
       '--color-secondary',
       isDark ? colorPrimary : colorSecondary,
     )
-  }, [isDark]) // La fonction est mise à jour chaque fois que isDark change
 
-  // Création d'une fonction pour basculer le mode sombre
+    // Setting the tertiary and tertiary-dark colors based on whether dark mode is enabled
+    document.documentElement.style.setProperty(
+      '--color-tertiary',
+      isDark ? colorTertiaryDark : colorTertiary,
+    )
+    document.documentElement.style.setProperty(
+      '--color-tertiary-dark',
+      isDark ? colorTertiary : colorTertiaryDark,
+    )
+  }, [isDark]) // updateTheme will be recreated whenever isDark changes
+
   const toggleTheme = useCallback(() => {
-    // Inversion de l'état du mode sombre
     setIsDark((prevIsDark) => !prevIsDark)
-    // Mise à jour du thème
     updateTheme()
-  }, [updateTheme]) // La fonction est mise à jour chaque fois que updateTheme change
+  }, [updateTheme])
 
-  // Mise à jour du thème chaque fois que isDark ou updateTheme change
   useEffect(() => {
     updateTheme()
   }, [isDark, updateTheme])
 
-  // Rendu du fournisseur de thème avec les valeurs isDark et toggleTheme
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       {children}
@@ -51,10 +58,8 @@ export const ThemeProvider = ({ children }) => {
   )
 }
 
-// Vérification des types des props
 ThemeProvider.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-// Exportation du fournisseur de thème
 export default ThemeProvider

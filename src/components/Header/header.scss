@@ -52,6 +52,7 @@
 
       &.active {
         color: var(--color-tertiary);
+        font-weight: $font-weight-bold;
       }
 
       &:hover {

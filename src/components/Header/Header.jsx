@@ -12,8 +12,9 @@ NavLinkItem.propTypes = {
 }
 
 const Header = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth) // Définit la largeur de la fenêtre du navigateur.
 
+  // Fonction pour définir la largeur de la fenêtre du navigateur.
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth)
     window.addEventListener('resize', handleResize)
@@ -44,12 +45,13 @@ const Header = () => {
     },
   ]
 
+  // Utilise la fonction windowWidth pour définir la largeur de la fenêtre du navigateur et afficher les icônes ou les noms des liens.
   return (
     <header className="header">
       <div className="header__logo">GD.</div>
       <div className="nav-wrapper">
         <ThemeSwitchButton />
-        <nav className="header__nav">
+        <nav className="header__nav"> 
           {navLinks.map((link, index) =>
             link.isExternal ? (
               <a
@@ -59,7 +61,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 aria-label={link.textName}
               >
-                {windowWidth <= 1024 ? link.icon : link.name}
+                {windowWidth <= 1024 ? link.icon : link.name} 
               </a>
             ) : (
               <NavLinkItem key={index} to={link.to}>

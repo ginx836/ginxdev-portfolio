@@ -1,3 +1,15 @@
+/**
+ * Component for a card slider.
+ *
+ * @component
+ * @param {Object[]} data - The data for the slider.
+ * @param {number} data[].id - The ID of the card.
+ * @param {string} data[].img - The image URL for the card.
+ * @param {string} data[].header - The header text for the card.
+ * @param {string} data[].body_title - The body title for the card.
+ * @returns {JSX.Element} The card slider component.
+ */
+
 import PropTypes from 'prop-types'
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 import { NavLink } from 'react-router-dom'
@@ -6,12 +18,18 @@ import './cardslider.scss'
 const CardSlider = ({ data }) => {
   const slides = data
 
+  /**
+   * Function to slide the slider to the left.
+   */
   const slideLeft = () => {
     const slider = document.getElementById('slider')
     const scrollValue = window.innerWidth <= 425 ? 300 : 425
     slider.scrollLeft -= scrollValue
   }
 
+  /**
+   * Function to slide the slider to the right.
+   */
   const slideRight = () => {
     const slider = document.getElementById('slider')
     const scrollValue = window.innerWidth <= 425 ? 300 : 425

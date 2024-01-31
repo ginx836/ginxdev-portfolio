@@ -51,11 +51,30 @@
 }
 
 .about__img {
-  width: 30%;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
 
   @media screen and (max-width: $breakpoint-1024px) {
     margin-top: $margin-medium;
-    
+  }
+
+  @media screen and (max-width: $breakpoint-425px) {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.about__quote {
+  margin-top: $margin-xlarge;
+  font-size: $fs-lg;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  color: var(--color-tertiary);
+  padding: 0 $margin-medium;
+
+  @media screen and (max-width: $breakpoint-1024px) {
+    font-size: $fs-md;
+    width: 70%;
   }
 }

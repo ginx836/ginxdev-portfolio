@@ -1,3 +1,8 @@
+// Desc: This file contains all the constants used in the project. 
+//       It is used to store the data that is used to display stack icons in the project page.
+//       Stacks are displayed in the form of icons, and the data is stored in projects.json.
+
+
 import {
   SiExpress,
   SiMongodb,

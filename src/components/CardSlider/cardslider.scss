@@ -14,6 +14,7 @@
   }
 }
 
+
 #slider {
   width: calc(1200px + 2 * $margin-large);
   height: 100%;
@@ -22,7 +23,7 @@
   scroll-behavior: smooth;
   margin-left: $margin-large;
   margin-right: $margin-large;
-  scrollbar-width: none; // Firefox
+  scrollbar-width: none; // Firefox only
 
   &::-webkit-scrollbar {
     display: none; // Chrome, Safari, Edge
@@ -59,6 +60,8 @@
   width: 400px;
   height: auto;
   background: var(--color-gray-light);
+  border: 1px solid var(--color-tertiary);
+  border-radius: 25px;
   display: inline-block;
   margin: 0 10px;
   padding: 10px;
@@ -70,6 +73,7 @@
 
 .card-img {
   width: 100%;
+  border-radius: 15px;
   object-fit: cover;
   background: var(--color-tertiary);
 }
@@ -84,7 +88,7 @@
     width: 100%;
     padding: 15px;
     background: var(--color-tertiary);
-    color: #000;
+    color: var(--color-secondary);
     font-size: $fs-lg;
     font-weight: $font-weight-bold;
     text-align: center;

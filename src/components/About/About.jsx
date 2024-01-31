@@ -8,14 +8,14 @@ const About = ({ text, img, quote }) => {
         <p className="about__text">{text}</p>
         <img className="about__img" src={img} alt="Ma photo de profil" />
       </div>
-        <quote className="about__quote">{quote}</quote>
+        <p className="about__quote">{quote}</p>
     </section>
   )
 }
 
 About.propTypes = {
   text: PropTypes.object.isRequired,
-  quote: PropTypes.string.isRequired,
+  quote: PropTypes.object.isRequired,
   img: PropTypes.string.isRequired,
 }
 

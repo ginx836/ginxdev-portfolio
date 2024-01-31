@@ -8,8 +8,8 @@ const Hero = ({ title, text, picture, subtitle, subtitle2 }) => {
       <div className="hero__description">
         <h1 className="hero__title">{title}</h1>
         <p className="hero__text">{text}</p>
-        <quote className="hero__subtitle">{subtitle}</quote>
-        <quote className="hero__subtitle2">{subtitle2}</quote>
+        <p className="hero__subtitle">{subtitle}</p>
+        <p className="hero__subtitle2">{subtitle2}</p>
       </div>
     </section>
   )

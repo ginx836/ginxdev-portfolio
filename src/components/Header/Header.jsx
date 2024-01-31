@@ -4,11 +4,16 @@ import { IoHomeOutline, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
 import { NavLink } from 'react-router-dom'
 import ThemeSwitchButton from '../utils/ThemeSwitcherButton'
 
-const NavLinkItem = ({ to, children }) => <NavLink to={to}>{children}</NavLink>
+const NavLinkItem = ({ to, children, 'aria-label': ariaLabel }) => (
+  <NavLink to={to} aria-label={ariaLabel}>
+    {children}
+  </NavLink>
+)
 
 NavLinkItem.propTypes = {
   to: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  'aria-label': PropTypes.string.isRequired,
 }
 
 const Header = () => {
@@ -51,7 +56,7 @@ const Header = () => {
       <div className="header__logo">GD.</div>
       <div className="nav-wrapper">
         <ThemeSwitchButton />
-        <nav className="header__nav"> 
+        <nav className="header__nav">
           {navLinks.map((link, index) =>
             link.isExternal ? (
               <a
@@ -61,10 +66,10 @@ const Header = () => {
                 rel="noopener noreferrer"
                 aria-label={link.textName}
               >
-                {windowWidth <= 1024 ? link.icon : link.name} 
+                {windowWidth <= 1024 ? link.icon : link.name}
               </a>
             ) : (
-              <NavLinkItem key={index} to={link.to}>
+              <NavLinkItem key={index} to={link.to} aria-label={link.textName}>
                 {windowWidth <= 1024 ? link.icon : link.name}
               </NavLinkItem>
             ),

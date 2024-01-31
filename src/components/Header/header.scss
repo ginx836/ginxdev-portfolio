@@ -15,13 +15,14 @@
   }
 
   .header__logo {
+    font-family: 'Lexend Exa', sans-serif;
     font-size: $fs-logo-large;
     color: var(--color-primary);
 
     @media screen and (max-width: $breakpoint-1440px) {
       font-size: $fs-logo;
     }
- 
+
     @media screen and (max-width: $breakpoint-425px) {
       font-size: $fs-logo-mobile;
     }
@@ -46,6 +47,7 @@
 
     & a {
       @include link;
+      font-family: "Lexend Exa", sans-serif;
       font-size: $fs-xl;
       font-variant: small-caps;
       color: var(--color-primary);
@@ -64,7 +66,6 @@
         font-size: $fs-md;
       }
     }
-
   }
 }
 

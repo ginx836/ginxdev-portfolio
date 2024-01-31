@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=M+PLUS+1:wght@100..900&display=swap');
 
 @import './utils/reset.scss';
 @import './utils/variables.scss';
@@ -6,7 +6,7 @@
 @import '../components/Header/header.scss';
 
 body {
-  font-family: 'Cabin', sans-serif;
+  font-family: "M PLUS 1", sans-serif;
   font-size: $fs-sm;
   color: var(--color-primary);
   background-color: var(--color-secondary);

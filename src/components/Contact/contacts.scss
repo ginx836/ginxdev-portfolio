@@ -22,7 +22,7 @@
     border: 1px solid var(--color-tertiary);
     border-radius: 25px;
     background-color: var(--color-tertiary);
-    color: #eeee;
+    color: var(--color-secondary);
 
     @media screen and (max-width: $breakpoint-1024px) {
       padding: $margin-medium;
@@ -83,7 +83,7 @@
       }
 
       .contact-item__link {
-        color: #eeee;
+        color: var(--color-secondary);
         font-size: $fs-md;
         text-decoration: none;
 

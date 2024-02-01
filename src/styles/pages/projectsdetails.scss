@@ -122,6 +122,7 @@
 .picture-container {
   @include flex-column;
   justify-content: center;
+  align-items: center;
   width: 50%;
   row-gap: $margin-xsmall;
 
@@ -129,8 +130,9 @@
     display: flex;
     justify-content: center;
     column-gap: $margin-xsmall;
+    max-width: 80%;
   }
-
+ 
   .picture-img {
     overflow: hidden;
     border-radius: 10px;

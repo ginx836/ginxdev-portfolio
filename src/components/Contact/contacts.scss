@@ -72,7 +72,7 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-size: $fs-lg;
+      font-size: $fs-md;
 
       @media screen and (max-width: $breakpoint-1024px) {
         font-size: $fs-md;

@@ -29,11 +29,11 @@
     display: none; // Chrome, Safari, Edge
   }
 
-  @media screen and (max-width: $breakpoint-1440px) {
-    width: 840px;
-  }
+  // @media screen and (max-width: $breakpoint-1440px) {
+  //   width: 840px;
+  // }
 
-  @media screen and (max-width: $breakpoint-1024px) {
+  @media screen and (max-width: $breakpoint-1440px) {
     width: 420px;
   }
 

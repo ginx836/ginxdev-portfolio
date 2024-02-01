@@ -42,19 +42,15 @@
 
 .hero__title {
   font-family: "Lexend Exa", sans-serif;
-  font-size: $fs-main-title;
+  font-size: $fs-logo-large;
   font-weight: 700;
   text-align: center;
 
   @media screen and (max-width: $breakpoint-1440px) {
-    font-size: $fs-logo-large;
-  }
-
-  @media screen and (max-width: $breakpoint-768px) {
     font-size: $fs-logo;
   }
 
-  @media screen and (max-width: $breakpoint-425px) {
+  @media screen and (max-width: $breakpoint-768px) {
     font-size: $fs-xxl;
   }
 }

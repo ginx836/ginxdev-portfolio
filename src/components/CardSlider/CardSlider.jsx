@@ -23,7 +23,7 @@ const CardSlider = ({ data }) => {
    */
   const slideLeft = () => {
     const slider = document.getElementById('slider')
-    const scrollValue = window.innerWidth <= 425 ? 300 : 425
+    const scrollValue = window.innerWidth <= 425 ? 300 : 420
     slider.scrollLeft -= scrollValue
   }
 
@@ -32,7 +32,7 @@ const CardSlider = ({ data }) => {
    */
   const slideRight = () => {
     const slider = document.getElementById('slider')
-    const scrollValue = window.innerWidth <= 425 ? 300 : 425
+    const scrollValue = window.innerWidth <= 425 ? 300 : 420
     slider.scrollLeft += scrollValue
   }
 

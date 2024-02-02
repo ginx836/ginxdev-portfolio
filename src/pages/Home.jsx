@@ -7,6 +7,7 @@ import Contact from '../components/Contact/Contact'
 import Hero from '../components/Hero/Hero'
 import Button from '../components/utils/Button/Button'
 import SectionDivider from '../components/utils/SectionDivider'
+import Skills from '../components/Skills/Skills'
 import data from '../data/projects.json'
 import '../styles/pages/home.scss'
 
@@ -26,13 +27,15 @@ const Home = () => {
         subtitle2={<>Keep moving forward</>}
         picture={HeroPicture}
       />
-      <SectionDivider title="Mes projets" />
+      <SectionDivider title="Réalisations" />
       <CardSlider data={data} />
       <div className="btn-projects-container">
         <NavLink to="/projects/0" onClick={() => window.scrollTo(0, 0)}>
           <Button buttonText="Voir tous les projets" />
         </NavLink>
       </div>
+      <SectionDivider title="Skills" />
+      <Skills />
       <SectionDivider title="A propos de moi" />
       <About
         title="A propos de moi"
@@ -60,7 +63,7 @@ const Home = () => {
         img={ProfilPicture}
         img_alt="Cédric Bourquin"
       />
-      <SectionDivider id="contact" title="Contact" />
+      <SectionDivider id="contact" title="Contactez-moi" />
       <Contact />
     </>
   )

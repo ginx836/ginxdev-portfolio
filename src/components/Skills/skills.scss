@@ -1,0 +1,60 @@
+@import '../../styles/utils/variables.scss';
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: $margin-xxlarge;
+  gap: $margin-medium;
+
+  @media screen and (max-width: $breakpoint-768px) {
+    margin-bottom: $margin-xxlarge;
+  }
+
+  @media screen and (max-width: $breakpoint-425px) {
+    margin-bottom: $margin-xlarge;
+  }
+
+  .skillCard {
+    @include flex-column;
+    width: 30rem;
+    height: auto;
+    padding: $margin-large;
+    border-radius: $border-radius;
+    border: 1px solid var(--color-tertiary);
+    background-color: var(--color-gray-light);
+    color: #000;
+    font-size: 1.2rem;
+    text-align: center;
+    gap: $margin-medium;
+
+    @media screen and (max-width: $breakpoint-768px) {
+      width: 20rem;
+    }
+
+    &-title {
+      font-size: $fs-lg;
+      font-weight: 700;
+    }
+
+    &-description {
+      font-size: $fs-sm;
+    }
+
+    &-tags {
+      @include flex-row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: $margin-xsmall;
+
+      .tag {
+        padding: $margin-xsmall;
+        border-radius: 5px;
+        background-color: var(--color-tertiary);
+        color: var(--color-secondary);
+        font-size: $fs-sm;
+      }
+    }
+  }
+}

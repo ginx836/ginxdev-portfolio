@@ -1,0 +1,13 @@
+[
+  {
+    "id": 0,
+    "title": "Développement Web",
+    "description": "Développement d'applications web, site vitrine, blog, portfolio...",
+    "tags": ["Javascript", "React", "Node.Js", "Express", "MongoDB"]
+  },
+  {
+    "id": 1,
+    "title": "SEO",
+    "description": "Optimisation du référencement naturel pour un meilleur positionnement sur les moteurs de recherche."
+  }
+]

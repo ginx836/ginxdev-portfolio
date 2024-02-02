@@ -9,6 +9,14 @@
   --color-gray-light: #f5f5f5;
 }
 
+[data-theme="light"] {
+  --color-secondary: #eeeeee;
+  --color-primary: #000;
+  --color-tertiary-dark: #47ae5d;
+  --color-tertiary: #1f4d29;
+  --color-gray-light: #f5f5f5;
+}
+
 /* Margin & Padding */
 $margin-xsmall: 0.5rem;
 $margin-small: 1rem;

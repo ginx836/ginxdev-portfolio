@@ -1,17 +1,21 @@
-import { useContext } from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
 import { ThemeContext } from '../utils/ThemeContext'
+import { useContext } from 'react'
 
 const ThemeSwitchButton = () => {
-  const { isDark, toggleTheme } = useContext(ThemeContext)
+  const { theme, toggleThemeMode } = useContext(ThemeContext)
 
   const handleClick = () => {
-    toggleTheme()
+    toggleThemeMode()
   }
 
   return (
-    <button className="theme-switcher" onClick={handleClick} aria-label='theme switcher'>
-      {isDark ? <FaMoon /> : <FaSun />}
+    <button
+      className="theme-switcher"
+      onClick={handleClick}
+      aria-label="theme switcher"
+    >
+      {theme === 'dark' ? <FaSun /> : <FaMoon />}
     </button>
   )
 }

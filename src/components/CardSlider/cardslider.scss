@@ -29,10 +29,6 @@
     display: none; // Chrome, Safari, Edge
   }
 
-  // @media screen and (max-width: $breakpoint-1440px) {
-  //   width: 840px;
-  // }
-
   @media screen and (max-width: $breakpoint-1440px) {
     width: 420px;
   }
@@ -108,5 +104,6 @@
     text-align: center;
     margin-top: $margin-large;
     white-space: normal;
+    line-height: 1.3;
   }
 }

@@ -5,10 +5,11 @@ import About from '../components/About/About'
 import CardSlider from '../components/CardSlider/CardSlider'
 import Contact from '../components/Contact/Contact'
 import Hero from '../components/Hero/Hero'
+import Skills from '../components/Skills/Skills'
 import Button from '../components/utils/Button/Button'
 import SectionDivider from '../components/utils/SectionDivider'
-import Skills from '../components/Skills/Skills'
 import data from '../data/projects.json'
+import skillsData from '../data/skills.json'
 import '../styles/pages/home.scss'
 
 const Home = () => {
@@ -35,7 +36,7 @@ const Home = () => {
         </NavLink>
       </div>
       <SectionDivider title="Skills" />
-      <Skills />
+      <Skills skillsData={skillsData} />
       <SectionDivider title="A propos de moi" />
       <About
         title="A propos de moi"
@@ -46,9 +47,11 @@ const Home = () => {
             <br />
             Parce qu&apos;il n&apos;est jamais trop tard pour apprendre et se
             lancer j&apos;ai décidé de faire de ma passion mon métier après 21
-            ans de commerce au service de mes clients.<br/>
-            <br />Auto-didacte, grâce à OpenClassrooms j&apos;ai pu mettre un premier pied à
-            l&apos;étrier en développant mes compétences.
+            ans de commerce au service de mes clients.
+            <br />
+            <br />
+            Auto-didacte, grâce à OpenClassrooms j&apos;ai pu mettre un premier
+            pied à l&apos;étrier en développant mes compétences.
             <br />
             <br /> Mon objectif : Continuer à apprendre et mettre mes
             compétences au service de vos projets.
@@ -56,8 +59,8 @@ const Home = () => {
         }
         quote={
           <>
-            &quot;La seule façon de faire du bon travail est d&apos;aimer ce
-            que vous faites&quot; - Steve Jobs
+            &quot;La seule façon de faire du bon travail est d&apos;aimer ce que
+            vous faites&quot; - Steve Jobs
           </>
         }
         img={ProfilPicture}

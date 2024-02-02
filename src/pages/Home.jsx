@@ -46,9 +46,9 @@ const Home = () => {
             <br />
             Parce qu&apos;il n&apos;est jamais trop tard pour apprendre et se
             lancer j&apos;ai décidé de faire de ma passion mon métier après 21
-            ans de commerce au service de mes clients.
-            <br /> Grâce à OpenClassrooms j&apos;ai pu mettre mon 1er pied à
-            l&apos;étrier.
+            ans de commerce au service de mes clients.<br/>
+            <br />Auto-didacte, grâce à OpenClassrooms j&apos;ai pu mettre un premier pied à
+            l&apos;étrier en développant mes compétences.
             <br />
             <br /> Mon objectif : Continuer à apprendre et mettre mes
             compétences au service de vos projets.

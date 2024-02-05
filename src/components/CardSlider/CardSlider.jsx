@@ -11,29 +11,25 @@
  */
 
 import PropTypes from 'prop-types'
+import { useRef } from 'react'
 import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
 import { NavLink } from 'react-router-dom'
 import './cardslider.scss'
 
 const CardSlider = ({ data }) => {
-  const slides = data
 
-  /**
-   * Function to slide the slider to the left.
-   */
+  const slides = data
+  
+  const sliderRef = useRef(null)
+
   const slideLeft = () => {
-    const slider = document.getElementById('slider')
     const scrollValue = window.innerWidth <= 425 ? 300 : 420
-    slider.scrollLeft -= scrollValue
+    sliderRef.current.scrollLeft -= scrollValue
   }
 
-  /**
-   * Function to slide the slider to the right.
-   */
   const slideRight = () => {
-    const slider = document.getElementById('slider')
     const scrollValue = window.innerWidth <= 425 ? 300 : 420
-    slider.scrollLeft += scrollValue
+    sliderRef.current.scrollLeft += scrollValue
   }
 
   return (
@@ -43,7 +39,7 @@ const CardSlider = ({ data }) => {
         className="slider-icon left"
         onClick={slideLeft}
       />
-      <div id="slider">
+      <div id="slider" ref={sliderRef}>
         {slides.map((data) => (
           <NavLink
             key={data.id}

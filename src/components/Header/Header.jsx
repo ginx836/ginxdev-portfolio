@@ -35,7 +35,7 @@ const Header = () => {
       isExternal: false,
     },
     {
-      to: 'https://www.linkedin.com',
+      to: 'https://www.linkedin.com/in/cedric-bourquin-ginxdev',
       icon: <IoLogoLinkedin className="link-icon" size={30} />,
       name: 'linkedIn',
       textName: 'linkedIn',
